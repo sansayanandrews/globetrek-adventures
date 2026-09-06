@@ -1,0 +1,14 @@
+{
+  "name": "globetrek-adventures",
+  "version": "1.0.0",
+  "description": "GlobeTrek Adventures - Travel & Tourism Management Platform (Negombo, Sri Lanka)",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "seed": "npm run db:seed --prefix server",
+    "test": "npm test --prefix server",
+    "screenshots": "node scripts/capture_screenshots.cjs"
+  },
+  "author": "GlobeTrek Engineering",
+  "license": "ISC"
+}

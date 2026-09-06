@@ -1,0 +1,174 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int            @id @default(autoincrement())
+  full_name     String
+  email         String         @unique
+  password_hash String
+  role          String         @default("customer") // customer | staff | admin
+  phone         String?
+  is_active     Boolean        @default(true)
+  created_at    DateTime       @default(now())
+
+  // Relations
+  packages_created   Package[]      @relation("PackageCreator")
+  bookings           Booking[]      @relation("CustomerBookings")
+  handled_bookings   Booking[]      @relation("StaffHandledBookings")
+  queries            Query[]        @relation("CustomerQueries")
+  assigned_queries   Query[]        @relation("StaffAssignedQueries")
+  audit_logs         AuditLog[]     @relation("UserAuditLogs")
+  notifications      Notification[]
+}
+
+model Package {
+  id                Int      @id @default(autoincrement())
+  title             String
+  slug              String   @unique
+  destination       String
+  description       String
+  itinerary_summary String
+  duration_days     Int
+  base_price_lkr    Float
+  category          String   // Cultural | Wildlife | Beach | Scenic | Adventure
+  cover_image_url   String
+  gallery           String   // JSON string of image URLs
+  is_published      Boolean  @default(true)
+  created_by        Int
+  created_at        DateTime @default(now())
+  updated_at        DateTime @updatedAt
+
+  creator           User     @relation("PackageCreator", fields: [created_by], references: [id])
+  accommodations    PackageAccommodationOption[]
+  transports        PackageTransportOption[]
+  bookings          Booking[]
+}
+
+model Accommodation {
+  id                   Int                          @id @default(autoincrement())
+  name                 String
+  type                 String                       // Hotel | Villa | Resort | Eco-Lodge
+  location             String
+  price_per_night_lkr  Float
+  rating               Float                        @default(4.5)
+  package_options      PackageAccommodationOption[]
+  bookings             Booking[]
+}
+
+model Transportation {
+  id                Int                      @id @default(autoincrement())
+  type              String                   // Private AC Car | Luxury Van | Safari Jeep | Scenic Train
+  provider_name     String
+  route_description String
+  price_lkr         Float
+  package_options   PackageTransportOption[]
+  bookings          Booking[]
+}
+
+model PackageAccommodationOption {
+  id               Int           @id @default(autoincrement())
+  package_id       Int
+  accommodation_id Int
+  is_default       Boolean       @default(false)
+
+  package          Package       @relation(fields: [package_id], references: [id], onDelete: Cascade)
+  accommodation    Accommodation @relation(fields: [accommodation_id], references: [id], onDelete: Cascade)
+
+  @@unique([package_id, accommodation_id])
+}
+
+model PackageTransportOption {
+  id                Int            @id @default(autoincrement())
+  package_id        Int
+  transportation_id Int
+  is_default        Boolean        @default(false)
+
+  package           Package        @relation(fields: [package_id], references: [id], onDelete: Cascade)
+  transportation    Transportation @relation(fields: [transportation_id], references: [id], onDelete: Cascade)
+
+  @@unique([package_id, transportation_id])
+}
+
+model Booking {
+  id                        Int             @id @default(autoincrement())
+  user_id                   Int
+  package_id                Int
+  travel_date               String          // YYYY-MM-DD
+  num_travellers            Int             @default(1)
+  selected_accommodation_id Int?
+  selected_transport_id     Int?
+  customizations            String?         // JSON string: extra_nights, special_requests, add-ons
+  subtotal_lkr              Float
+  total_price_lkr           Float
+  status                    String          @default("pending") // pending | confirmed | cancelled | completed
+  payment_status            String          @default("unpaid")  // unpaid | paid
+  coordination_notes        String?
+  handled_by_staff_id       Int?
+  created_at                DateTime        @default(now())
+  updated_at                DateTime        @updatedAt
+
+  customer                  User            @relation("CustomerBookings", fields: [user_id], references: [id])
+  package                   Package         @relation(fields: [package_id], references: [id])
+  accommodation             Accommodation?  @relation(fields: [selected_accommodation_id], references: [id])
+  transportation            Transportation? @relation(fields: [selected_transport_id], references: [id])
+  handled_by                User?           @relation("StaffHandledBookings", fields: [handled_by_staff_id], references: [id])
+  payments                  Payment[]
+  queries                   Query[]
+}
+
+model Payment {
+  id              Int      @id @default(autoincrement())
+  booking_id      Int
+  amount_lkr      Float
+  method          String   @default("simulated") // always "simulated"
+  status          String   @default("success")   // success | failed
+  transaction_ref String   @unique
+  created_at      DateTime @default(now())
+
+  booking         Booking  @relation(fields: [booking_id], references: [id], onDelete: Cascade)
+}
+
+model Query {
+  id                Int       @id @default(autoincrement())
+  user_id           Int?
+  booking_id        Int?
+  category          String    // booking_issue | general_inquiry | customization_request | complaint
+  subject           String
+  message           String
+  status            String    @default("open") // open | in_progress | resolved
+  assigned_staff_id Int?
+  staff_response    String?
+  created_at        DateTime  @default(now())
+  resolved_at       DateTime?
+
+  customer          User?     @relation("CustomerQueries", fields: [user_id], references: [id])
+  booking           Booking?  @relation(fields: [booking_id], references: [id])
+  assigned_staff    User?     @relation("StaffAssignedQueries", fields: [assigned_staff_id], references: [id])
+}
+
+model AuditLog {
+  id            Int      @id @default(autoincrement())
+  actor_user_id Int
+  action        String
+  target_type   String
+  target_id     Int?
+  created_at    DateTime @default(now())
+
+  actor         User     @relation("UserAuditLogs", fields: [actor_user_id], references: [id])
+}
+
+model Notification {
+  id         Int      @id @default(autoincrement())
+  user_id    Int
+  message    String
+  is_read    Boolean  @default(false)
+  created_at DateTime @default(now())
+
+  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
