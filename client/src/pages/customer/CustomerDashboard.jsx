@@ -56,7 +56,7 @@ export default function CustomerDashboard() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       
       {/* Welcome Banner */}
-      <div className="bg-gradient-to-r from-teal-800 to-slate-900 rounded-3xl p-6 sm:p-8 text-white flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-md">
+      <div className="bg-gradient-to-r from-blue-800 to-slate-900 rounded-3xl p-6 sm:p-8 text-white flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-md">
         <div>
           <span className="text-xs font-bold uppercase tracking-wider text-amber-300 bg-amber-900/40 px-2.5 py-1 rounded-md border border-amber-600/30">
             Traveler Portal
@@ -71,7 +71,7 @@ export default function CustomerDashboard() {
 
         <Link
           to="/packages"
-          className="px-5 py-3 bg-teal-500 hover:bg-teal-600 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm shrink-0 transition-all"
+          className="px-5 py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm shrink-0 transition-all"
         >
           <Sparkles className="w-4 h-4" /> Book New Adventure
         </Link>
@@ -84,8 +84,8 @@ export default function CustomerDashboard() {
           <p className="text-2xl font-extrabold text-slate-900 font-display mt-1">{bookings.length}</p>
         </div>
         <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
-          <span className="text-[11px] font-bold uppercase text-teal-600">Confirmed Trips</span>
-          <p className="text-2xl font-extrabold text-teal-700 font-display mt-1">{confirmedBookings.length}</p>
+          <span className="text-[11px] font-bold uppercase text-blue-600">Confirmed Trips</span>
+          <p className="text-2xl font-extrabold text-blue-700 font-display mt-1">{confirmedBookings.length}</p>
         </div>
         <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
           <span className="text-[11px] font-bold uppercase text-amber-600">Pending Review</span>
@@ -103,7 +103,7 @@ export default function CustomerDashboard() {
           onClick={() => setActiveTab('bookings')}
           className={`pb-3 flex items-center gap-2 transition-all cursor-pointer ${
             activeTab === 'bookings'
-              ? 'border-b-2 border-teal-600 text-teal-700 font-bold'
+              ? 'border-b-2 border-blue-600 text-blue-700 font-bold'
               : 'text-slate-500 hover:text-slate-800'
           }`}
         >
@@ -114,7 +114,7 @@ export default function CustomerDashboard() {
           onClick={() => setActiveTab('queries')}
           className={`pb-3 flex items-center gap-2 transition-all cursor-pointer ${
             activeTab === 'queries'
-              ? 'border-b-2 border-teal-600 text-teal-700 font-bold'
+              ? 'border-b-2 border-blue-600 text-blue-700 font-bold'
               : 'text-slate-500 hover:text-slate-800'
           }`}
         >
@@ -125,7 +125,7 @@ export default function CustomerDashboard() {
           onClick={() => setActiveTab('notifications')}
           className={`pb-3 flex items-center gap-2 transition-all cursor-pointer ${
             activeTab === 'notifications'
-              ? 'border-b-2 border-teal-600 text-teal-700 font-bold'
+              ? 'border-b-2 border-blue-600 text-blue-700 font-bold'
               : 'text-slate-500 hover:text-slate-800'
           }`}
         >
@@ -136,7 +136,7 @@ export default function CustomerDashboard() {
           onClick={() => setActiveTab('profile')}
           className={`pb-3 flex items-center gap-2 transition-all cursor-pointer ${
             activeTab === 'profile'
-              ? 'border-b-2 border-teal-600 text-teal-700 font-bold'
+              ? 'border-b-2 border-blue-600 text-blue-700 font-bold'
               : 'text-slate-500 hover:text-slate-800'
           }`}
         >
@@ -160,7 +160,7 @@ export default function CustomerDashboard() {
               <p className="text-xs text-slate-500 mt-1 mb-6">
                 You haven't booked any Sri Lankan tour packages yet. Browse our catalog to get started.
               </p>
-              <Link to="/packages" className="px-5 py-2.5 bg-teal-600 text-white font-bold text-xs rounded-xl shadow-sm">
+              <Link to="/packages" className="px-5 py-2.5 bg-blue-600 text-white font-bold text-xs rounded-xl shadow-sm">
                 Browse Tour Packages
               </Link>
             </div>
@@ -182,7 +182,7 @@ export default function CustomerDashboard() {
                             ? 'bg-amber-100 text-amber-800'
                             : b.status === 'cancelled'
                             ? 'bg-rose-100 text-rose-800'
-                            : 'bg-teal-100 text-teal-800'
+                            : 'bg-blue-100 text-blue-800'
                         }`}
                       >
                         ? {b.status}
@@ -213,11 +213,11 @@ export default function CustomerDashboard() {
 
                     {/* Agency Coordination Notes */}
                     {b.coordination_notes && (
-                      <div className="bg-teal-50/70 p-3 rounded-xl border border-teal-100 text-xs text-teal-900 mt-2">
-                        <span className="font-bold block text-teal-950 mb-0.5">Negombo Agency Dispatch Notes:</span>
+                      <div className="bg-blue-50/70 p-3 rounded-xl border border-blue-100 text-xs text-blue-900 mt-2">
+                        <span className="font-bold block text-blue-950 mb-0.5">Negombo Agency Dispatch Notes:</span>
                         <p>{b.coordination_notes}</p>
                         {b.handled_by && (
-                          <span className="text-[10px] text-teal-700 mt-1 block">
+                          <span className="text-[10px] text-blue-700 mt-1 block">
                             Handled by: {b.handled_by.full_name}
                           </span>
                         )}
@@ -228,7 +228,7 @@ export default function CustomerDashboard() {
                   <div className="flex md:flex-col justify-between md:justify-center items-end border-t md:border-t-0 md:border-l border-slate-100 pt-4 md:pt-0 md:pl-6 shrink-0 gap-3">
                     <div className="text-right">
                       <span className="text-[10px] font-bold uppercase text-slate-400 block">Total Settled</span>
-                      <span className="text-xl font-extrabold text-teal-700 font-display">
+                      <span className="text-xl font-extrabold text-blue-700 font-display">
                         {b.total_price_lkr.toLocaleString()} LKR
                       </span>
                     </div>
@@ -256,7 +256,7 @@ export default function CustomerDashboard() {
             </h3>
             <Link
               to="/contact"
-              className="px-4 py-2 bg-teal-600 text-white rounded-xl font-bold text-xs hover:bg-teal-700 shadow-2xs"
+              className="px-4 py-2 bg-blue-600 text-white rounded-xl font-bold text-xs hover:bg-blue-700 shadow-2xs"
             >
               + Submit New Inquiry
             </Link>
@@ -295,7 +295,7 @@ export default function CustomerDashboard() {
                     </div>
                     <Link
                       to={`/queries/${q.id}`}
-                      className="text-xs font-bold text-teal-700 hover:text-teal-800 flex items-center gap-1"
+                      className="text-xs font-bold text-blue-700 hover:text-blue-800 flex items-center gap-1"
                     >
                       View Thread <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
@@ -348,17 +348,17 @@ export default function CustomerDashboard() {
                   className={`p-4 rounded-xl border flex items-center justify-between text-xs transition-colors ${
                     n.is_read
                       ? 'bg-slate-50 border-slate-100 text-slate-600'
-                      : 'bg-teal-50/60 border-teal-200 text-slate-900 font-semibold shadow-2xs'
+                      : 'bg-blue-50/60 border-blue-200 text-slate-900 font-semibold shadow-2xs'
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <Bell className={`w-4 h-4 ${n.is_read ? 'text-slate-400' : 'text-teal-600'}`} />
+                    <Bell className={`w-4 h-4 ${n.is_read ? 'text-slate-400' : 'text-blue-600'}`} />
                     <span>{n.message}</span>
                   </div>
                   {!n.is_read && (
                     <button
                       onClick={() => handleMarkNotificationRead(n.id)}
-                      className="px-3 py-1 bg-white border border-teal-300 text-teal-700 rounded-lg text-[11px] font-bold hover:bg-teal-600 hover:text-white transition-colors"
+                      className="px-3 py-1 bg-white border border-blue-300 text-blue-700 rounded-lg text-[11px] font-bold hover:bg-blue-600 hover:text-white transition-colors"
                     >
                       Mark Read
                     </button>
@@ -392,7 +392,7 @@ export default function CustomerDashboard() {
             </div>
             <div>
               <span className="text-slate-400 uppercase font-bold block mb-1">Account Role</span>
-              <span className="inline-block px-2.5 py-0.5 rounded uppercase font-bold text-[10px] bg-teal-100 text-teal-800">
+              <span className="inline-block px-2.5 py-0.5 rounded uppercase font-bold text-[10px] bg-blue-100 text-blue-800">
                 {user?.role}
               </span>
             </div>

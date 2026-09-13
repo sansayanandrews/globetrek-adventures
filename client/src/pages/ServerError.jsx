@@ -23,7 +23,7 @@ export default function ServerError() {
         <div className="flex flex-col sm:flex-row gap-2.5 pt-2">
           <button
             onClick={() => window.location.reload()}
-            className="flex-1 py-3 px-4 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer"
+            className="flex-1 py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer"
           >
             <RotateCcw className="w-4 h-4" /> Try Again
           </button>

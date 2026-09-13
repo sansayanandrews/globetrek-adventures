@@ -29,7 +29,7 @@ export default function Transportation() {
       
       {/* Header */}
       <div className="border-b border-slate-200/80 pb-6">
-        <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+        <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
           Fleet & Logistics
         </span>
         <h1 className="text-3xl font-extrabold text-slate-900 font-display mt-2">
@@ -56,10 +56,10 @@ export default function Transportation() {
             >
               <div>
                 <div className="flex justify-between items-start mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <Car className="w-6 h-6" />
                   </div>
-                  <span className="text-xs font-bold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-lg">
+                  <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg">
                     {t.price_lkr.toLocaleString()} LKR
                   </span>
                 </div>
@@ -77,16 +77,16 @@ export default function Transportation() {
                 {/* Amenities Badges */}
                 <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-500 border-t border-slate-100 pt-4">
                   <span className="flex items-center gap-1.5">
-                    <ShieldCheck className="w-3.5 h-3.5 text-teal-600" /> Commercial Insurance
+                    <ShieldCheck className="w-3.5 h-3.5 text-blue-600" /> Commercial Insurance
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <Wifi className="w-3.5 h-3.5 text-teal-600" /> On-Board Wi-Fi
+                    <Wifi className="w-3.5 h-3.5 text-blue-600" /> On-Board Wi-Fi
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <Users className="w-3.5 h-3.5 text-teal-600" /> English Chauffeur
+                    <Users className="w-3.5 h-3.5 text-blue-600" /> English Chauffeur
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <Luggage className="w-3.5 h-3.5 text-teal-600" /> Luggage Space
+                    <Luggage className="w-3.5 h-3.5 text-blue-600" /> Luggage Space
                   </span>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default function Transportation() {
                 <span className="text-[11px] text-slate-400 font-medium">Included in customized tours</span>
                 <Link
                   to="/packages"
-                  className="text-xs font-bold text-teal-700 hover:text-teal-800 flex items-center gap-1"
+                  className="text-xs font-bold text-blue-700 hover:text-blue-800 flex items-center gap-1"
                 >
                   Book with Tour <ArrowRight className="w-3 h-3" />
                 </Link>
@@ -120,7 +120,7 @@ export default function Transportation() {
         </div>
         <Link
           to="/contact"
-          className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white font-bold text-xs rounded-xl transition-all shadow-md shrink-0"
+          className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold text-xs rounded-xl transition-all shadow-md shrink-0"
         >
           Inquire About Airport Transfers
         </Link>

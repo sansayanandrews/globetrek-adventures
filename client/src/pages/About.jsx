@@ -27,9 +27,9 @@ export default function About() {
   return (
     <div className="space-y-16 pb-20">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-teal-900 to-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8">
+      <div className="bg-gradient-to-r from-blue-900 to-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-300 bg-teal-800/40 px-3 py-1 rounded-full border border-teal-700/50">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-300 bg-blue-800/40 px-3 py-1 rounded-full border border-blue-700/50">
             About GlobeTrek Adventures
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold font-display mt-4 mb-6">
@@ -45,7 +45,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
               Our Roots
             </span>
             <h2 className="text-3xl font-bold font-display text-slate-900 mt-2 mb-6">
@@ -70,9 +70,9 @@ export default function About() {
               alt="Negombo Lagoon and Fishing Catamarans"
               className="rounded-3xl shadow-xl w-full h-[420px] object-cover"
             />
-            <div className="absolute -bottom-5 -right-5 bg-teal-700 text-white p-6 rounded-2xl shadow-lg max-w-xs hidden sm:block">
+            <div className="absolute -bottom-5 -right-5 bg-blue-700 text-white p-6 rounded-2xl shadow-lg max-w-xs hidden sm:block">
               <p className="text-2xl font-extrabold font-display">100%</p>
-              <p className="text-xs text-teal-100 font-medium mt-1">
+              <p className="text-xs text-blue-100 font-medium mt-1">
                 Sri Lankan owned and staffed, promoting sustainable local community livelihoods.
               </p>
             </div>
@@ -94,7 +94,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-xs border border-slate-200/80">
-              <div className="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
                 <Compass className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 font-display mb-2">
@@ -118,7 +118,7 @@ export default function About() {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-xs border border-slate-200/80">
-              <div className="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
                 <HeartHandshake className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 font-display mb-2">
@@ -135,7 +135,7 @@ export default function About() {
       {/* Leadership & Operations Team */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
             Our People
           </span>
           <h2 className="text-3xl font-bold font-display text-slate-900 mt-2">
@@ -158,7 +158,7 @@ export default function About() {
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-slate-900 font-display">{m.name}</h3>
-                <p className="text-xs font-semibold text-teal-600 uppercase tracking-wider mb-3">
+                <p className="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-3">
                   {m.role}
                 </p>
                 <p className="text-xs text-slate-600 leading-relaxed">{m.bio}</p>
@@ -181,7 +181,7 @@ export default function About() {
           </div>
           <Link
             to="/contact"
-            className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm rounded-xl transition-all shadow-md shrink-0 flex items-center gap-2"
+            className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold text-sm rounded-xl transition-all shadow-md shrink-0 flex items-center gap-2"
           >
             Get Office Directions <ArrowRight className="w-4 h-4" />
           </Link>

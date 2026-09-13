@@ -79,7 +79,7 @@ export default function StaffDashboard() {
       {/* Header Banner */}
       <div className="bg-slate-900 rounded-3xl p-6 sm:p-8 text-white flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-md border border-slate-800">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 px-3 py-1 rounded-full border border-teal-800">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-950 px-3 py-1 rounded-full border border-blue-800">
             Agency Staff Workspace
           </span>
           <h1 className="text-2xl sm:text-3xl font-bold font-display mt-2">
@@ -93,7 +93,7 @@ export default function StaffDashboard() {
         <div className="flex gap-2.5 shrink-0">
           <Link
             to="/staff/packages"
-            className="px-4 py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
+            className="px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
           >
             <Package className="w-4 h-4" /> Manage Packages
           </Link>
@@ -115,8 +115,8 @@ export default function StaffDashboard() {
         </div>
 
         <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-teal-600">Active Packages</span>
-          <p className="text-3xl font-extrabold text-teal-700 font-display mt-1">{stats.activePackages}</p>
+          <span className="text-[11px] font-bold uppercase tracking-wider text-blue-600">Active Packages</span>
+          <p className="text-3xl font-extrabold text-blue-700 font-display mt-1">{stats.activePackages}</p>
           <span className="text-[11px] text-slate-400 mt-1 block">Published on public catalog</span>
         </div>
 
@@ -147,7 +147,7 @@ export default function StaffDashboard() {
             </div>
             <Link
               to="/staff/bookings"
-              className="text-xs font-bold text-teal-700 hover:text-teal-800 flex items-center gap-1"
+              className="text-xs font-bold text-blue-700 hover:text-blue-800 flex items-center gap-1"
             >
               View All <ArrowRight className="w-3.5 h-3.5" />
             </Link>
@@ -203,7 +203,7 @@ export default function StaffDashboard() {
             </div>
             <Link
               to="/staff/queries"
-              className="text-xs font-bold text-teal-700 hover:text-teal-800 flex items-center gap-1"
+              className="text-xs font-bold text-blue-700 hover:text-blue-800 flex items-center gap-1"
             >
               Go to Ticket Desk <ArrowRight className="w-3.5 h-3.5" />
             </Link>
@@ -238,7 +238,7 @@ export default function StaffDashboard() {
 
                   <Link
                     to="/staff/queries"
-                    className="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-bold text-xs shrink-0 shadow-2xs"
+                    className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold text-xs shrink-0 shadow-2xs"
                   >
                     Reply
                   </Link>

@@ -73,7 +73,7 @@ export default function PackageDetail() {
       <div className="max-w-xl mx-auto px-4 py-24 text-center">
         <h2 className="text-2xl font-bold font-display text-slate-900">Tour Package Not Found</h2>
         <p className="text-slate-500 text-sm mt-2 mb-6">The itinerary you are looking for might have been moved or unpublished.</p>
-        <Link to="/packages" className="px-5 py-2.5 bg-teal-600 text-white rounded-xl font-bold text-xs">
+        <Link to="/packages" className="px-5 py-2.5 bg-blue-600 text-white rounded-xl font-bold text-xs">
           Return to Packages
         </Link>
       </div>
@@ -126,9 +126,9 @@ export default function PackageDetail() {
       
       {/* Breadcrumb Navigation */}
       <nav className="flex items-center gap-2 text-xs text-slate-500">
-        <Link to="/" className="hover:text-teal-600">Home</Link>
+        <Link to="/" className="hover:text-blue-600">Home</Link>
         <ChevronRight className="w-3.5 h-3.5" />
-        <Link to="/packages" className="hover:text-teal-600">Tour Packages</Link>
+        <Link to="/packages" className="hover:text-blue-600">Tour Packages</Link>
         <ChevronRight className="w-3.5 h-3.5" />
         <span className="font-semibold text-slate-800 truncate max-w-xs">{pkg.title}</span>
       </nav>
@@ -137,14 +137,14 @@ export default function PackageDetail() {
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <span className="px-3 py-1 rounded-full text-xs font-bold bg-teal-50 text-teal-700">
+            <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-700">
               {pkg.category}
             </span>
             <span className="px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800">
               {pkg.duration_days} Days / {pkg.duration_days - 1} Nights
             </span>
             <span className="text-xs text-slate-400 flex items-center gap-1">
-              <MapPin className="w-3.5 h-3.5 text-teal-600" /> {pkg.destination}
+              <MapPin className="w-3.5 h-3.5 text-blue-600" /> {pkg.destination}
             </span>
           </div>
           <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 font-display">
@@ -155,13 +155,13 @@ export default function PackageDetail() {
         <div className="bg-white px-6 py-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center gap-6 shrink-0">
           <div>
             <span className="text-[11px] font-bold uppercase text-slate-400 block">Base Price</span>
-            <div className="text-2xl font-extrabold text-teal-700 font-display">
+            <div className="text-2xl font-extrabold text-blue-700 font-display">
               {pkg.base_price_lkr.toLocaleString()} <span className="text-xs font-normal text-slate-500">LKR / person</span>
             </div>
           </div>
           <a
             href="#customizer"
-            className="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs shadow-sm transition-all"
+            className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs shadow-sm transition-all"
           >
             Customize This Trip
           </a>
@@ -187,7 +187,7 @@ export default function PackageDetail() {
                 key={idx}
                 onClick={() => setActiveImage(img)}
                 className={`w-24 h-16 rounded-xl overflow-hidden shrink-0 border-2 transition-all cursor-pointer ${
-                  activeImage === img ? 'border-teal-600 scale-105 shadow-md' : 'border-transparent opacity-70 hover:opacity-100'
+                  activeImage === img ? 'border-blue-600 scale-105 shadow-md' : 'border-transparent opacity-70 hover:opacity-100'
                 }`}
               >
                 <img src={img} alt={`Gallery ${idx}`} className="w-full h-full object-cover" />
@@ -215,19 +215,19 @@ export default function PackageDetail() {
             {/* Highlights bullet points */}
             <div className="mt-6 pt-6 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-700">
               <div className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-teal-600 shrink-0" />
+                <Check className="w-4 h-4 text-blue-600 shrink-0" />
                 <span>Private dedicated chauffeur throughout</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-teal-600 shrink-0" />
+                <Check className="w-4 h-4 text-blue-600 shrink-0" />
                 <span>Handpicked boutique & eco-resort stays</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-teal-600 shrink-0" />
+                <Check className="w-4 h-4 text-blue-600 shrink-0" />
                 <span>Daily breakfast & designated experiences included</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-teal-600 shrink-0" />
+                <Check className="w-4 h-4 text-blue-600 shrink-0" />
                 <span>24/7 on-ground assistance from Negombo HQ</span>
               </div>
             </div>
@@ -236,14 +236,14 @@ export default function PackageDetail() {
           {/* Day-by-Day Itinerary */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xs border border-slate-200/80">
             <h2 className="text-xl font-bold font-display text-slate-900 mb-6 flex items-center gap-2">
-              <Calendar className="w-5 h-5 text-teal-600" />
+              <Calendar className="w-5 h-5 text-blue-600" />
               Detailed Day-by-Day Itinerary
             </h2>
 
             <div className="space-y-6">
               {itineraryDays.map((dayText, idx) => (
-                <div key={idx} className="relative pl-8 pb-6 border-l-2 border-teal-200 last:border-transparent last:pb-0">
-                  <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center text-[10px] font-bold shadow-xs">
+                <div key={idx} className="relative pl-8 pb-6 border-l-2 border-blue-200 last:border-transparent last:pb-0">
+                  <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px] font-bold shadow-xs">
                     {idx + 1}
                   </div>
                   <h3 className="text-sm font-bold text-slate-900 font-display">
@@ -260,7 +260,7 @@ export default function PackageDetail() {
           {/* Accommodation Options */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xs border border-slate-200/80">
             <h2 className="text-xl font-bold font-display text-slate-900 mb-4 flex items-center gap-2">
-              <Bed className="w-5 h-5 text-teal-600" />
+              <Bed className="w-5 h-5 text-blue-600" />
               Partner Accommodations Available for This Tour
             </h2>
             <p className="text-xs text-slate-500 mb-6">
@@ -273,13 +273,13 @@ export default function PackageDetail() {
                   key={item.id}
                   className={`p-4 rounded-2xl border transition-all ${
                     selectedAccId === item.accommodation_id
-                      ? 'border-teal-600 bg-teal-50/50 shadow-xs'
+                      ? 'border-blue-600 bg-blue-50/50 shadow-xs'
                       : 'border-slate-200 bg-white'
                   }`}
                 >
                   <div className="flex justify-between items-start">
                     <div>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-teal-600">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600">
                         {item.accommodation.type}
                       </span>
                       <h4 className="text-sm font-bold text-slate-900 font-display mt-0.5">
@@ -306,11 +306,11 @@ export default function PackageDetail() {
 
         {/* Right Column: "Customize This Trip" Interactive Pricing Widget */}
         <div id="customizer" className="space-y-6">
-          <div className="sticky top-28 bg-white rounded-3xl p-6 shadow-xl border-2 border-teal-600/30 space-y-6">
+          <div className="sticky top-28 bg-white rounded-3xl p-6 shadow-xl border-2 border-blue-600/30 space-y-6">
             
             <div className="border-b border-slate-100 pb-4">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md">
+                <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">
                   Interactive Calculator
                 </span>
                 <span className="text-[11px] text-slate-400 font-medium">Instant Quote</span>
@@ -326,21 +326,21 @@ export default function PackageDetail() {
             {/* 1. Select Start Date */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5 flex items-center gap-1.5">
-                <Calendar className="w-4 h-4 text-teal-600" /> Start Date
+                <Calendar className="w-4 h-4 text-blue-600" /> Start Date
               </label>
               <input
                 type="date"
                 value={travelDate}
                 min={new Date().toISOString().split('T')[0]}
                 onChange={(e) => setTravelDate(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-800 focus:bg-white focus:border-teal-600 focus:outline-hidden cursor-pointer"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-800 focus:bg-white focus:border-blue-600 focus:outline-hidden cursor-pointer"
               />
             </div>
 
             {/* 2. Number of Travelers Counter */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5 flex items-center gap-1.5">
-                <Users className="w-4 h-4 text-teal-600" /> Number of Travelers
+                <Users className="w-4 h-4 text-blue-600" /> Number of Travelers
               </label>
               <div className="flex items-center justify-between px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl">
                 <button
@@ -367,12 +367,12 @@ export default function PackageDetail() {
             {pkg.accommodations && pkg.accommodations.length > 0 && (
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5 flex items-center gap-1.5">
-                  <Bed className="w-4 h-4 text-teal-600" /> Accommodation Preference
+                  <Bed className="w-4 h-4 text-blue-600" /> Accommodation Preference
                 </label>
                 <select
                   value={selectedAccId || ''}
                   onChange={(e) => setSelectedAccId(parseInt(e.target.value, 10))}
-                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:bg-white focus:border-teal-600 focus:outline-hidden cursor-pointer"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:bg-white focus:border-blue-600 focus:outline-hidden cursor-pointer"
                 >
                   {pkg.accommodations.map((a) => (
                     <option key={a.accommodation_id} value={a.accommodation_id}>
@@ -387,12 +387,12 @@ export default function PackageDetail() {
             {pkg.transports && pkg.transports.length > 0 && (
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5 flex items-center gap-1.5">
-                  <Car className="w-4 h-4 text-teal-600" /> Dedicated Transportation
+                  <Car className="w-4 h-4 text-blue-600" /> Dedicated Transportation
                 </label>
                 <select
                   value={selectedTransId || ''}
                   onChange={(e) => setSelectedTransId(parseInt(e.target.value, 10))}
-                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:bg-white focus:border-teal-600 focus:outline-hidden cursor-pointer"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:bg-white focus:border-blue-600 focus:outline-hidden cursor-pointer"
                 >
                   {pkg.transports.map((t) => (
                     <option key={t.transportation_id} value={t.transportation_id}>
@@ -409,7 +409,7 @@ export default function PackageDetail() {
                 <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Optional Extra Nights
                 </label>
-                <span className="text-xs font-bold text-teal-700">+{extraNights} Nights</span>
+                <span className="text-xs font-bold text-blue-700">+{extraNights} Nights</span>
               </div>
               <div className="flex gap-2">
                 {[0, 1, 2, 3].map((n) => (
@@ -419,7 +419,7 @@ export default function PackageDetail() {
                     onClick={() => setExtraNights(n)}
                     className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all ${
                       extraNights === n
-                        ? 'bg-teal-600 text-white shadow-2xs'
+                        ? 'bg-blue-600 text-white shadow-2xs'
                         : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                     }`}
                   >
@@ -449,7 +449,7 @@ export default function PackageDetail() {
               )}
               <div className="pt-2 border-t border-slate-200 flex justify-between items-center">
                 <span className="font-bold text-slate-900 text-sm">Calculated Total:</span>
-                <span className="text-xl font-extrabold text-teal-700 font-display">
+                <span className="text-xl font-extrabold text-blue-700 font-display">
                   {totalCalculatedLkr.toLocaleString()} <span className="text-xs font-medium text-slate-500">LKR</span>
                 </span>
               </div>
@@ -460,7 +460,7 @@ export default function PackageDetail() {
               <button
                 type="button"
                 onClick={handleProceedToBooking}
-                className="w-full py-3.5 bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-bold rounded-xl shadow-md shadow-teal-600/30 text-sm flex items-center justify-center gap-2 cursor-pointer transition-all"
+                className="w-full py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded-xl shadow-md shadow-blue-600/30 text-sm flex items-center justify-center gap-2 cursor-pointer transition-all"
               >
                 Proceed to Book This Trip <ArrowRight className="w-4 h-4" />
               </button>

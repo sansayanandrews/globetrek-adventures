@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Compass, User, Mail, Lock, Phone, UserPlus, Check, AlertCircle } from 'lucide-react';
+import { User, Mail, Lock, Phone, UserPlus, Check, AlertCircle } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
+import Logo from '../components/common/Logo';
 
 export default function Register() {
   const navigate = useNavigate();
@@ -55,9 +56,9 @@ export default function Register() {
       <div className="max-w-md w-full bg-white rounded-3xl p-8 border border-slate-200/80 shadow-xl space-y-6">
         
         {/* Header */}
-        <div className="text-center">
-          <div className="w-12 h-12 rounded-2xl bg-teal-600 text-white flex items-center justify-center mx-auto shadow-md shadow-teal-600/30 mb-3">
-            <Compass className="w-6 h-6" />
+        <div className="text-center flex flex-col items-center">
+          <div className="mb-4">
+            <Logo size="lg" variant="light" showSubtitle={false} />
           </div>
           <h1 className="text-2xl font-bold font-display text-slate-900">
             Create Traveler Account
@@ -88,7 +89,7 @@ export default function Register() {
                 placeholder="e.g. Rachel Adams"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-hidden"
               />
             </div>
           </div>
@@ -106,7 +107,7 @@ export default function Register() {
                 placeholder="rachel@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-hidden"
               />
             </div>
           </div>
@@ -123,7 +124,7 @@ export default function Register() {
                 placeholder="+94 77 000 0000 or +44 7911 123456"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-hidden"
               />
             </div>
           </div>
@@ -141,7 +142,7 @@ export default function Register() {
                 placeholder="Create a secure password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-hidden"
               />
             </div>
 
@@ -161,7 +162,7 @@ export default function Register() {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer mt-2"
+            className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm shadow-blue-600/25 transition-all cursor-pointer mt-2"
           >
             <UserPlus className="w-4 h-4" />
             {submitting ? 'Creating Account...' : 'Register & Start Exploring'}
@@ -170,7 +171,7 @@ export default function Register() {
 
         <div className="text-center text-xs text-slate-500 pt-2 border-t border-slate-100">
           Already have an account?{' '}
-          <Link to="/login" className="font-bold text-teal-600 hover:underline">
+          <Link to="/login" className="font-bold text-blue-600 hover:underline">
             Sign In
           </Link>
         </div>

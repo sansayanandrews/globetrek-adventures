@@ -34,13 +34,13 @@ export function ToastProvider({ children }) {
                 ? 'bg-emerald-50 border-emerald-200 text-emerald-900'
                 : t.type === 'error'
                 ? 'bg-rose-50 border-rose-200 text-rose-900'
-                : 'bg-teal-50 border-teal-200 text-teal-900'
+                : 'bg-blue-50 border-blue-200 text-blue-900'
             }`}
           >
             <div className="flex items-center gap-3">
               {t.type === 'success' && <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />}
               {t.type === 'error' && <AlertCircle className="w-5 h-5 text-rose-600 shrink-0" />}
-              {t.type === 'info' && <Info className="w-5 h-5 text-teal-600 shrink-0" />}
+              {t.type === 'info' && <Info className="w-5 h-5 text-blue-600 shrink-0" />}
               <span>{t.message}</span>
             </div>
             <button

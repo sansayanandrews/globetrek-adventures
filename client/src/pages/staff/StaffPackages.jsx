@@ -140,7 +140,7 @@ export default function StaffPackages() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 pb-6">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
             Catalog Management
           </span>
           <h1 className="text-3xl font-bold font-display text-slate-900 mt-2">
@@ -153,7 +153,7 @@ export default function StaffPackages() {
 
         <button
           onClick={openCreateModal}
-          className="px-5 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer"
+          className="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer"
         >
           <Plus className="w-4 h-4" /> Create New Tour Package
         </button>
@@ -168,7 +168,7 @@ export default function StaffPackages() {
             placeholder="Search packages by title or destination..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:outline-hidden focus:border-teal-500 shadow-2xs"
+            className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:outline-hidden focus:border-blue-500 shadow-2xs"
           />
         </div>
         <span className="text-xs text-slate-500 font-medium">
@@ -203,7 +203,7 @@ export default function StaffPackages() {
                       <div>
                         <strong className="text-slate-900 font-bold block">{pkg.title}</strong>
                         <span className="text-slate-400 text-[11px] flex items-center gap-1">
-                          <MapPin className="w-3 h-3 text-teal-600" /> {pkg.destination}
+                          <MapPin className="w-3 h-3 text-blue-600" /> {pkg.destination}
                         </span>
                       </div>
                     </div>
@@ -216,7 +216,7 @@ export default function StaffPackages() {
                   <td className="px-6 py-4 text-slate-700 font-semibold">
                     {pkg.duration_days} Days
                   </td>
-                  <td className="px-6 py-4 font-extrabold text-teal-700">
+                  <td className="px-6 py-4 font-extrabold text-blue-700">
                     {pkg.base_price_lkr.toLocaleString()} LKR
                   </td>
                   <td className="px-6 py-4">
@@ -243,7 +243,7 @@ export default function StaffPackages() {
                     <div className="inline-flex items-center gap-2">
                       <button
                         onClick={() => openEditModal(pkg)}
-                        className="p-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 text-slate-700 hover:text-teal-700 transition-colors"
+                        className="p-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 text-slate-700 hover:text-blue-700 transition-colors"
                         title="Edit Package"
                       >
                         <Edit2 className="w-4 h-4" />
@@ -288,7 +288,7 @@ export default function StaffPackages() {
                   value={formData.title}
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                   placeholder="e.g. Ella Scenic Highlands & Nine Arches Trek"
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-medium focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-medium focus:bg-white focus:border-blue-500 focus:outline-hidden"
                 />
               </div>
 
@@ -301,7 +301,7 @@ export default function StaffPackages() {
                     value={formData.destination}
                     onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
                     placeholder="e.g. Ella, Badulla"
-                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-medium focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-medium focus:bg-white focus:border-blue-500 focus:outline-hidden"
                   />
                 </div>
 
@@ -310,7 +310,7 @@ export default function StaffPackages() {
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-semibold focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-semibold focus:bg-white focus:border-blue-500 focus:outline-hidden"
                   >
                     <option value="Cultural">Cultural Heritage</option>
                     <option value="Wildlife">Wildlife Safari</option>
@@ -331,7 +331,7 @@ export default function StaffPackages() {
                     required
                     value={formData.duration_days}
                     onChange={(e) => setFormData({ ...formData, duration_days: parseInt(e.target.value, 10) })}
-                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-semibold focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-semibold focus:bg-white focus:border-blue-500 focus:outline-hidden"
                   />
                 </div>
 
@@ -344,7 +344,7 @@ export default function StaffPackages() {
                     required
                     value={formData.base_price_lkr}
                     onChange={(e) => setFormData({ ...formData, base_price_lkr: parseFloat(e.target.value) })}
-                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-semibold focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-semibold focus:bg-white focus:border-blue-500 focus:outline-hidden"
                   />
                 </div>
               </div>
@@ -356,7 +356,7 @@ export default function StaffPackages() {
                   value={formData.cover_image_url}
                   onChange={(e) => setFormData({ ...formData, cover_image_url: e.target.value })}
                   placeholder="https://..."
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-mono text-[11px] focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-mono text-[11px] focus:bg-white focus:border-blue-500 focus:outline-hidden"
                 />
               </div>
 
@@ -368,7 +368,7 @@ export default function StaffPackages() {
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                   placeholder="Comprehensive description of the tour experience..."
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-medium focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-medium focus:bg-white focus:border-blue-500 focus:outline-hidden"
                 />
               </div>
 
@@ -380,7 +380,7 @@ export default function StaffPackages() {
                   value={formData.itinerary_summary}
                   onChange={(e) => setFormData({ ...formData, itinerary_summary: e.target.value })}
                   placeholder="Day 1: Negombo to Sigiriya | Day 2: Lion Rock climb | Day 3: Return"
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-medium focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-medium focus:bg-white focus:border-blue-500 focus:outline-hidden"
                 />
               </div>
 
@@ -390,7 +390,7 @@ export default function StaffPackages() {
                   id="published_check"
                   checked={formData.is_published}
                   onChange={(e) => setFormData({ ...formData, is_published: e.target.checked })}
-                  className="w-4 h-4 accent-teal-600"
+                  className="w-4 h-4 accent-blue-600"
                 />
                 <label htmlFor="published_check" className="font-bold text-slate-800 cursor-pointer">
                   Publish to Public Catalog Immediately
@@ -407,7 +407,7 @@ export default function StaffPackages() {
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-2.5 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl shadow-sm"
+                  className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-sm"
                 >
                   {editingPkg ? 'Save Changes' : 'Create Package'}
                 </button>

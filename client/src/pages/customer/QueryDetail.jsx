@@ -37,7 +37,7 @@ export default function QueryDetail() {
     return (
       <div className="max-w-md mx-auto px-4 py-24 text-center">
         <h2 className="text-xl font-bold font-display text-slate-900">Inquiry Thread Not Found</h2>
-        <Link to="/dashboard" className="mt-4 inline-block px-5 py-2 bg-teal-600 text-white rounded-xl text-xs font-bold">
+        <Link to="/dashboard" className="mt-4 inline-block px-5 py-2 bg-blue-600 text-white rounded-xl text-xs font-bold">
           Go to Dashboard
         </Link>
       </div>
@@ -48,7 +48,7 @@ export default function QueryDetail() {
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-6">
       <Link
         to="/dashboard"
-        className="inline-flex items-center gap-1.5 text-xs font-bold text-teal-700 hover:text-teal-800"
+        className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 hover:text-blue-800"
       >
         <ArrowLeft className="w-4 h-4" /> Back to Dashboard
       </Link>
@@ -91,14 +91,14 @@ export default function QueryDetail() {
 
         {/* Official Staff Response */}
         <div className="space-y-2">
-          <div className="flex items-center gap-2 text-xs font-bold text-teal-800">
-            <ShieldCheck className="w-4 h-4 text-teal-600" />
+          <div className="flex items-center gap-2 text-xs font-bold text-blue-800">
+            <ShieldCheck className="w-4 h-4 text-blue-600" />
             <span>Official Response from GlobeTrek Negombo Team:</span>
           </div>
           {query.staff_response ? (
-            <div className="p-5 bg-teal-50/70 rounded-2xl border border-teal-200 text-xs sm:text-sm text-teal-950 leading-relaxed space-y-2">
+            <div className="p-5 bg-blue-50/70 rounded-2xl border border-blue-200 text-xs sm:text-sm text-blue-950 leading-relaxed space-y-2">
               <p>{query.staff_response}</p>
-              <div className="pt-2 border-t border-teal-100 flex justify-between text-[11px] text-teal-700">
+              <div className="pt-2 border-t border-blue-100 flex justify-between text-[11px] text-blue-700">
                 <span>Handled by: <strong>{query.assigned_staff?.full_name || 'Operations Agent'}</strong></span>
                 {query.resolved_at && <span>Resolved on {new Date(query.resolved_at).toLocaleDateString()}</span>}
               </div>

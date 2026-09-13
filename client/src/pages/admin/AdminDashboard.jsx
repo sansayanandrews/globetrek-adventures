@@ -43,9 +43,9 @@ export default function AdminDashboard() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-teal-950 to-slate-900 rounded-3xl p-6 sm:p-8 text-white flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-xl border border-slate-800">
+      <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 rounded-3xl p-6 sm:p-8 text-white flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-xl border border-slate-800">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 px-3 py-1 rounded-full border border-teal-800">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-950 px-3 py-1 rounded-full border border-blue-800">
             Executive Control Suite
           </span>
           <h1 className="text-2xl sm:text-3xl font-bold font-display mt-2">
@@ -59,7 +59,7 @@ export default function AdminDashboard() {
         <div className="flex gap-2.5 shrink-0">
           <Link
             to="/admin/reports"
-            className="px-4 py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
+            className="px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
           >
             <TrendingUp className="w-4 h-4" /> Reports & Analytics
           </Link>
@@ -76,8 +76,8 @@ export default function AdminDashboard() {
       {/* KPI Cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-teal-600">Total Agency Revenue</span>
-          <p className="text-2xl sm:text-3xl font-extrabold text-teal-700 font-display mt-1">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-blue-600">Total Agency Revenue</span>
+          <p className="text-2xl sm:text-3xl font-extrabold text-blue-700 font-display mt-1">
             {overview.totalRevenueLKR.toLocaleString()} <span className="text-xs font-normal text-slate-500">LKR</span>
           </p>
           <span className="text-[11px] text-slate-400 mt-1 block">From confirmed & paid bookings</span>
@@ -108,16 +108,16 @@ export default function AdminDashboard() {
           to="/admin/staff"
           className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all group"
         >
-          <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-700 flex items-center justify-center group-hover:bg-teal-600 group-hover:text-white transition-colors mb-4">
+          <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors mb-4">
             <Users className="w-6 h-6" />
           </div>
-          <h3 className="text-base font-bold text-slate-900 font-display group-hover:text-teal-600 transition-colors">
+          <h3 className="text-base font-bold text-slate-900 font-display group-hover:text-blue-600 transition-colors">
             Staff Account Management
           </h3>
           <p className="text-xs text-slate-500 mt-1">
             Create staff accounts, manage roles, and activate/deactivate user credentials.
           </p>
-          <span className="inline-flex items-center gap-1 text-xs font-bold text-teal-700 mt-4">
+          <span className="inline-flex items-center gap-1 text-xs font-bold text-blue-700 mt-4">
             Manage Staff <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </span>
         </Link>
@@ -144,16 +144,16 @@ export default function AdminDashboard() {
           to="/admin/reports"
           className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all group"
         >
-          <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-700 flex items-center justify-center group-hover:bg-teal-600 group-hover:text-white transition-colors mb-4">
+          <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors mb-4">
             <TrendingUp className="w-6 h-6" />
           </div>
-          <h3 className="text-base font-bold text-slate-900 font-display group-hover:text-teal-600 transition-colors">
+          <h3 className="text-base font-bold text-slate-900 font-display group-hover:text-blue-600 transition-colors">
             Reports & Business Analytics
           </h3>
           <p className="text-xs text-slate-500 mt-1">
             Revenue trends, bookings by destination charts, and customer acquisition graphs.
           </p>
-          <span className="inline-flex items-center gap-1 text-xs font-bold text-teal-700 mt-4">
+          <span className="inline-flex items-center gap-1 text-xs font-bold text-blue-700 mt-4">
             Open Analytics <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </span>
         </Link>

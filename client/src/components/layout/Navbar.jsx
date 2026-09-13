@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Compass, Menu, X, User, LogOut, Shield, Briefcase, ChevronDown } from 'lucide-react';
+import { Menu, X, User, LogOut, Shield, Briefcase, ChevronDown } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../../context/ToastContext';
+import Logo from '../common/Logo';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -40,18 +41,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-teal-700 to-teal-500 flex items-center justify-center text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform">
-              <Compass className="w-6 h-6 animate-pulse" />
-            </div>
-            <div>
-              <span className="text-xl font-bold font-display tracking-tight text-slate-900 flex items-center gap-1.5">
-                GlobeTrek <span className="text-teal-600">Adventures</span>
-              </span>
-              <span className="block text-[11px] font-medium tracking-wider text-slate-400 uppercase">
-                Negombo � Sri Lanka
-              </span>
-            </div>
+          <Link to="/" className="hover:opacity-95 transition-opacity">
+            <Logo size="md" variant="light" />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -62,8 +53,8 @@ export default function Navbar() {
                 to={link.path}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   isActive(link.path)
-                    ? 'text-teal-700 bg-teal-50/80 font-semibold'
-                    : 'text-slate-600 hover:text-teal-600 hover:bg-slate-50'
+                    ? 'text-blue-700 bg-blue-50/80 font-semibold'
+                    : 'text-slate-600 hover:text-blue-600 hover:bg-slate-50'
                 }`}
               >
                 {link.name}
@@ -77,16 +68,16 @@ export default function Navbar() {
               <div className="relative">
                 <button
                   onClick={() => setUserDropdownOpen(!userDropdownOpen)}
-                  className="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-200 bg-white hover:border-teal-300 shadow-2xs transition-all"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-200 bg-white hover:border-blue-300 shadow-2xs transition-all"
                 >
-                  <div className="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-xs">
+                  <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs">
                     {user.full_name?.charAt(0) || 'U'}
                   </div>
                   <div className="text-left">
                     <p className="text-xs font-semibold text-slate-900 leading-tight truncate max-w-[120px]">
                       {user.full_name}
                     </p>
-                    <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-teal-600">
+                    <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-blue-600">
                       {user.role}
                     </span>
                   </div>
@@ -108,9 +99,9 @@ export default function Navbar() {
                       <Link
                         to="/dashboard"
                         onClick={() => setUserDropdownOpen(false)}
-                        className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-700 hover:bg-teal-50 hover:text-teal-700 font-medium"
+                        className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-700 font-medium"
                       >
-                        <User className="w-4 h-4 text-teal-600" />
+                        <User className="w-4 h-4 text-blue-600" />
                         My Dashboard & Bookings
                       </Link>
                     )}
@@ -119,9 +110,9 @@ export default function Navbar() {
                       <Link
                         to="/staff"
                         onClick={() => setUserDropdownOpen(false)}
-                        className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-700 hover:bg-teal-50 hover:text-teal-700 font-medium"
+                        className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-700 font-medium"
                       >
-                        <Briefcase className="w-4 h-4 text-teal-600" />
+                        <Briefcase className="w-4 h-4 text-blue-600" />
                         Staff Operations Workspace
                       </Link>
                     )}
@@ -130,9 +121,9 @@ export default function Navbar() {
                       <Link
                         to="/admin"
                         onClick={() => setUserDropdownOpen(false)}
-                        className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-700 hover:bg-teal-50 hover:text-teal-700 font-medium"
+                        className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-700 font-medium"
                       >
-                        <Shield className="w-4 h-4 text-teal-600" />
+                        <Shield className="w-4 h-4 text-blue-600" />
                         Admin Management Suite
                       </Link>
                     )}
@@ -144,7 +135,7 @@ export default function Navbar() {
                         setUserDropdownOpen(false);
                         handleLogout();
                       }}
-                      className="w-full flex items-center gap-2.5 px-4 py-2 text-sm text-rose-600 hover:bg-rose-50 font-medium"
+                      className="w-full flex items-center gap-2.5 px-4 py-2 text-sm text-rose-600 hover:bg-rose-50 font-medium cursor-pointer"
                     >
                       <LogOut className="w-4 h-4" />
                       Sign Out
@@ -156,13 +147,13 @@ export default function Navbar() {
               <div className="flex items-center gap-2.5">
                 <Link
                   to="/login"
-                  className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-teal-600 transition-colors"
+                  className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors"
                 >
                   Sign In
                 </Link>
                 <Link
                   to="/register"
-                  className="px-5 py-2.5 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-xl shadow-sm shadow-teal-600/20 hover:shadow-md transition-all"
+                  className="px-5 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-sm shadow-blue-600/20 hover:shadow-md transition-all"
                 >
                   Register
                 </Link>
@@ -194,7 +185,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className={`block px-3 py-2.5 rounded-xl text-base font-medium ${
                 isActive(link.path)
-                  ? 'text-teal-700 bg-teal-50 font-semibold'
+                  ? 'text-blue-700 bg-blue-50 font-semibold'
                   : 'text-slate-700 hover:bg-slate-50'
               }`}
             >
@@ -207,13 +198,13 @@ export default function Navbar() {
               <div className="space-y-2">
                 <div className="px-3 py-2 bg-slate-50 rounded-xl">
                   <p className="text-sm font-bold text-slate-900">{user.full_name}</p>
-                  <p className="text-xs text-slate-500 capitalize">{user.role} � {user.email}</p>
+                  <p className="text-xs text-slate-500 capitalize">{user.role} &bull; {user.email}</p>
                 </div>
                 {user.role === 'customer' && (
                   <Link
                     to="/dashboard"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-3 py-2 text-sm font-semibold text-teal-700"
+                    className="block px-3 py-2 text-sm font-semibold text-blue-700"
                   >
                     Customer Dashboard
                   </Link>
@@ -222,7 +213,7 @@ export default function Navbar() {
                   <Link
                     to="/staff"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-3 py-2 text-sm font-semibold text-teal-700"
+                    className="block px-3 py-2 text-sm font-semibold text-blue-700"
                   >
                     Staff Workspace
                   </Link>
@@ -231,7 +222,7 @@ export default function Navbar() {
                   <Link
                     to="/admin"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-3 py-2 text-sm font-semibold text-teal-700"
+                    className="block px-3 py-2 text-sm font-semibold text-blue-700"
                   >
                     Admin Suite
                   </Link>
@@ -258,7 +249,7 @@ export default function Navbar() {
                 <Link
                   to="/register"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full text-center py-2.5 bg-teal-600 text-white rounded-xl font-semibold text-sm shadow-sm"
+                  className="w-full text-center py-2.5 bg-blue-600 text-white rounded-xl font-semibold text-sm shadow-sm"
                 >
                   Register
                 </Link>

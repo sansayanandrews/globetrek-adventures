@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Compass, Mail, Lock, LogIn, KeyRound, AlertCircle, CheckCircle2, X } from 'lucide-react';
+import { Mail, Lock, LogIn, KeyRound, AlertCircle, CheckCircle2, X } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
 import api from '../api/client';
+import Logo from '../components/common/Logo';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -71,12 +72,12 @@ export default function Login() {
       <div className="max-w-md w-full bg-white rounded-3xl p-8 border border-slate-200/80 shadow-xl space-y-6">
         
         {/* Header */}
-        <div className="text-center">
-          <div className="w-12 h-12 rounded-2xl bg-teal-600 text-white flex items-center justify-center mx-auto shadow-md shadow-teal-600/30 mb-3">
-            <Compass className="w-6 h-6" />
+        <div className="text-center flex flex-col items-center">
+          <div className="mb-4">
+            <Logo size="lg" variant="light" showSubtitle={false} />
           </div>
           <h1 className="text-2xl font-bold font-display text-slate-900">
-            Sign In to GlobeTrek
+            Sign In to Your Account
           </h1>
           <p className="text-xs text-slate-500 mt-1">
             Access your bookings, itineraries, and support tickets
@@ -95,28 +96,28 @@ export default function Login() {
         <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200/80 space-y-2">
           <div className="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-slate-400">
             <span className="flex items-center gap-1">
-              <KeyRound className="w-3.5 h-3.5 text-teal-600" /> Demo Quick Credentials
+              <KeyRound className="w-3.5 h-3.5 text-blue-600" /> Demo Quick Credentials
             </span>
           </div>
           <div className="grid grid-cols-3 gap-1.5">
             <button
               type="button"
               onClick={() => fillDemo('customer@globetrek.com', 'Customer123!')}
-              className="py-1.5 px-2 bg-white border border-slate-200 hover:border-teal-500 rounded-lg text-[11px] font-bold text-slate-700 hover:text-teal-700 shadow-2xs transition-all text-center"
+              className="py-1.5 px-2 bg-white border border-slate-200 hover:border-blue-500 rounded-lg text-[11px] font-bold text-slate-700 hover:text-blue-700 shadow-2xs transition-all text-center cursor-pointer"
             >
               Customer
             </button>
             <button
               type="button"
               onClick={() => fillDemo('staff@globetrek.com', 'Staff123!')}
-              className="py-1.5 px-2 bg-white border border-slate-200 hover:border-teal-500 rounded-lg text-[11px] font-bold text-slate-700 hover:text-teal-700 shadow-2xs transition-all text-center"
+              className="py-1.5 px-2 bg-white border border-slate-200 hover:border-blue-500 rounded-lg text-[11px] font-bold text-slate-700 hover:text-blue-700 shadow-2xs transition-all text-center cursor-pointer"
             >
               Staff
             </button>
             <button
               type="button"
               onClick={() => fillDemo('admin@globetrek.com', 'Admin123!')}
-              className="py-1.5 px-2 bg-white border border-slate-200 hover:border-teal-500 rounded-lg text-[11px] font-bold text-slate-700 hover:text-teal-700 shadow-2xs transition-all text-center"
+              className="py-1.5 px-2 bg-white border border-slate-200 hover:border-blue-500 rounded-lg text-[11px] font-bold text-slate-700 hover:text-blue-700 shadow-2xs transition-all text-center cursor-pointer"
             >
               Admin
             </button>
@@ -137,7 +138,7 @@ export default function Login() {
                 placeholder="name@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-hidden"
               />
             </div>
           </div>
@@ -150,7 +151,7 @@ export default function Login() {
               <button
                 type="button"
                 onClick={() => setForgotModalOpen(true)}
-                className="text-[11px] font-semibold text-teal-600 hover:text-teal-700"
+                className="text-[11px] font-semibold text-blue-600 hover:text-blue-700 cursor-pointer"
               >
                 Forgot Password?
               </button>
@@ -160,10 +161,10 @@ export default function Login() {
               <input
                 type="password"
                 required
-                placeholder="��������"
+                placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-hidden"
               />
             </div>
           </div>
@@ -171,7 +172,7 @@ export default function Login() {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer mt-2"
+            className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm shadow-blue-600/25 transition-all cursor-pointer mt-2"
           >
             <LogIn className="w-4 h-4" />
             {submitting ? 'Signing in...' : 'Sign In'}
@@ -180,7 +181,7 @@ export default function Login() {
 
         <div className="text-center text-xs text-slate-500 pt-2 border-t border-slate-100">
           Do not have a traveler account?{' '}
-          <Link to="/register" className="font-bold text-teal-600 hover:underline">
+          <Link to="/register" className="font-bold text-blue-600 hover:underline">
             Register Here
           </Link>
         </div>
@@ -196,7 +197,7 @@ export default function Login() {
                 setForgotModalOpen(false);
                 setForgotSuccess('');
               }}
-              className="absolute top-4 right-4 p-1 rounded-lg text-slate-400 hover:text-slate-600"
+              className="absolute top-4 right-4 p-1 rounded-lg text-slate-400 hover:text-slate-600 cursor-pointer"
             >
               <X className="w-4 h-4" />
             </button>
@@ -212,8 +213,8 @@ export default function Login() {
             </p>
 
             {forgotSuccess ? (
-              <div className="p-3 bg-teal-50 border border-teal-200 rounded-xl text-teal-900 text-xs flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+              <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-900 text-xs flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                 <span>{forgotSuccess}</span>
               </div>
             ) : (
@@ -224,11 +225,11 @@ export default function Login() {
                   placeholder="Enter your email"
                   value={forgotEmail}
                   onChange={(e) => setForgotEmail(e.target.value)}
-                  className="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                  className="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:bg-white focus:border-blue-500 focus:outline-hidden"
                 />
                 <button
                   type="submit"
-                  className="w-full py-2 bg-teal-600 text-white rounded-xl text-xs font-bold hover:bg-teal-700"
+                  className="w-full py-2 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 cursor-pointer"
                 >
                   Send Simulated Reset Link
                 </button>

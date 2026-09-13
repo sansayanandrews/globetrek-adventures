@@ -54,7 +54,7 @@ export default function Contact() {
       
       {/* Header */}
       <div className="border-b border-slate-200/80 pb-6 text-center max-w-3xl mx-auto">
-        <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+        <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
           Negombo Coordination Desk
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display mt-2">
@@ -71,13 +71,13 @@ export default function Contact() {
         <div className="space-y-6">
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-6">
             <h2 className="text-lg font-bold font-display text-slate-900 flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-teal-600" />
+              <MapPin className="w-5 h-5 text-blue-600" />
               Headquarters in Negombo
             </h2>
             
             <ul className="space-y-4 text-xs text-slate-600">
               <li className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
@@ -88,7 +88,7 @@ export default function Contact() {
               </li>
 
               <li className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
@@ -99,7 +99,7 @@ export default function Contact() {
               </li>
 
               <li className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
@@ -110,7 +110,7 @@ export default function Contact() {
               </li>
 
               <li className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0">
                   <Clock className="w-4 h-4" />
                 </div>
                 <div>
@@ -121,8 +121,8 @@ export default function Contact() {
               </li>
             </ul>
 
-            <div className="pt-4 border-t border-slate-100 flex items-center gap-2 text-teal-700 bg-teal-50/50 p-3 rounded-xl text-xs">
-              <ShieldCheck className="w-4 h-4 shrink-0 text-teal-600" />
+            <div className="pt-4 border-t border-slate-100 flex items-center gap-2 text-blue-700 bg-blue-50/50 p-3 rounded-xl text-xs">
+              <ShieldCheck className="w-4 h-4 shrink-0 text-blue-600" />
               <span>Certified under SLTDA License #TA/2026/0488</span>
             </div>
           </div>
@@ -144,13 +144,13 @@ export default function Contact() {
                   Your inquiry has been assigned reference ticket <strong>#{submittedQuery.id}</strong>. A dedicated staff member from our Negombo desk will respond shortly.
                 </p>
                 {user && (
-                  <p className="text-xs text-teal-700 font-medium">
+                  <p className="text-xs text-blue-700 font-medium">
                     You can track staff responses in your <a href="/dashboard" className="underline font-bold">Customer Dashboard</a>.
                   </p>
                 )}
                 <button
                   onClick={() => setSubmittedQuery(null)}
-                  className="mt-4 px-6 py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-xl font-bold text-xs shadow-sm"
+                  className="mt-4 px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-xs shadow-sm"
                 >
                   Submit Another Inquiry
                 </button>
@@ -175,7 +175,7 @@ export default function Contact() {
                     <select
                       value={category}
                       onChange={(e) => setCategory(e.target.value)}
-                      className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:bg-white focus:border-teal-500 focus:outline-hidden cursor-pointer"
+                      className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:bg-white focus:border-blue-500 focus:outline-hidden cursor-pointer"
                     >
                       <option value="general_inquiry">General Inquiry</option>
                       <option value="customization_request">Customization Request</option>
@@ -194,7 +194,7 @@ export default function Contact() {
                       placeholder="e.g. 101"
                       value={bookingId}
                       onChange={(e) => setBookingId(e.target.value)}
-                      className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                      className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-500 focus:outline-hidden"
                     />
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export default function Contact() {
                     placeholder="e.g. Inquiring about whale watching season in Mirissa or custom family package"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-500 focus:outline-hidden"
                   />
                 </div>
 
@@ -225,7 +225,7 @@ export default function Contact() {
                     placeholder="Describe your planned travel dates, number of guests, desired destinations, or specific assistance required..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-500 focus:outline-hidden"
                   />
                 </div>
 
@@ -236,7 +236,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="px-6 py-3 bg-teal-600 hover:bg-teal-700 disabled:opacity-50 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer"
+                    className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer"
                   >
                     <Send className="w-4 h-4" />
                     {submitting ? 'Submitting...' : 'Send Inquiry to Negombo Desk'}

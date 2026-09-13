@@ -70,7 +70,7 @@ export default function Packages() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200/80 pb-6">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
             Island Expeditions
           </span>
           <h1 className="text-3xl font-extrabold text-slate-900 font-display mt-2">
@@ -88,7 +88,7 @@ export default function Packages() {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-hidden focus:border-teal-500 shadow-2xs cursor-pointer"
+            className="bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 focus:outline-hidden focus:border-blue-500 shadow-2xs cursor-pointer"
           >
             <option value="recommended">Recommended</option>
             <option value="price_asc">Price: Low to High</option>
@@ -109,7 +109,7 @@ export default function Packages() {
               placeholder="Search by destination or keyword (e.g. Sigiriya, Tea, Safari, Galle)..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-900 placeholder-slate-400 focus:bg-white focus:border-teal-500 focus:outline-hidden transition-all"
+              className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-900 placeholder-slate-400 focus:bg-white focus:border-blue-500 focus:outline-hidden transition-all"
             />
             {search && (
               <button
@@ -146,7 +146,7 @@ export default function Packages() {
                   onClick={() => setCategory(cat)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     category === cat
-                      ? 'bg-teal-600 text-white shadow-2xs'
+                      ? 'bg-blue-600 text-white shadow-2xs'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                   }`}
                 >
@@ -168,7 +168,7 @@ export default function Packages() {
                   onClick={() => setDuration(d)}
                   className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     duration === d
-                      ? 'bg-teal-600 text-white shadow-2xs'
+                      ? 'bg-blue-600 text-white shadow-2xs'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                   }`}
                 >
@@ -184,7 +184,7 @@ export default function Packages() {
               <label className="text-xs font-bold uppercase tracking-wider text-slate-500">
                 Max Price Per Person (LKR)
               </label>
-              <span className="text-xs font-extrabold text-teal-700 bg-teal-50 px-2 py-0.5 rounded">
+              <span className="text-xs font-extrabold text-blue-700 bg-blue-50 px-2 py-0.5 rounded">
                 Up to {Number(maxPrice).toLocaleString()} LKR
               </span>
             </div>
@@ -195,7 +195,7 @@ export default function Packages() {
               step="5000"
               value={maxPrice}
               onChange={(e) => setMaxPrice(e.target.value)}
-              className="w-full accent-teal-600 cursor-pointer h-2 bg-slate-200 rounded-lg"
+              className="w-full accent-blue-600 cursor-pointer h-2 bg-slate-200 rounded-lg"
             />
             <div className="flex justify-between text-[10px] text-slate-400 mt-1">
               <span>50,000 LKR</span>
@@ -209,7 +209,7 @@ export default function Packages() {
       {/* Package Results Count */}
       <div className="flex items-center justify-between text-xs text-slate-500 font-medium">
         <span>Showing <strong className="text-slate-800">{packages.length}</strong> tour packages</span>
-        {category !== 'All' && <span>Filtered by category: <strong className="text-teal-700">{category}</strong></span>}
+        {category !== 'All' && <span>Filtered by category: <strong className="text-blue-700">{category}</strong></span>}
       </div>
 
       {/* Package Cards Grid */}
@@ -228,7 +228,7 @@ export default function Packages() {
           </p>
           <button
             onClick={resetFilters}
-            className="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs rounded-xl shadow-sm transition-all"
+            className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow-sm transition-all"
           >
             Reset All Filters
           </button>
@@ -251,12 +251,12 @@ export default function Packages() {
                   <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-white/90 text-slate-800 shadow-2xs backdrop-blur-xs">
                     {pkg.category}
                   </span>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-teal-600 text-white shadow-2xs">
+                  <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white shadow-2xs">
                     {pkg.duration_days} Days / {pkg.duration_days - 1} Nights
                   </span>
                 </div>
                 <div className="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-xs px-2.5 py-1 rounded-lg text-white text-xs flex items-center gap-1">
-                  <MapPin className="w-3.5 h-3.5 text-teal-400" />
+                  <MapPin className="w-3.5 h-3.5 text-blue-400" />
                   <span>{pkg.destination}</span>
                 </div>
               </div>
@@ -264,7 +264,7 @@ export default function Packages() {
               {/* Card Body */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h2 className="text-lg font-bold text-slate-900 group-hover:text-teal-600 transition-colors font-display line-clamp-1 mb-2">
+                  <h2 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors font-display line-clamp-1 mb-2">
                     {pkg.title}
                   </h2>
                   <p className="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
@@ -277,14 +277,14 @@ export default function Packages() {
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                       Base Rate
                     </span>
-                    <span className="text-lg font-extrabold text-teal-700">
+                    <span className="text-lg font-extrabold text-blue-700">
                       {pkg.base_price_lkr.toLocaleString()} <span className="text-xs font-normal text-slate-500">LKR</span>
                     </span>
                   </div>
                   <div className="flex gap-2">
                     <Link
                       to={`/packages/${pkg.slug}`}
-                      className="px-3 py-2 bg-teal-50 hover:bg-teal-600 text-teal-700 hover:text-white rounded-xl text-xs font-bold transition-all shadow-2xs flex items-center gap-1"
+                      className="px-3 py-2 bg-blue-50 hover:bg-blue-600 text-blue-700 hover:text-white rounded-xl text-xs font-bold transition-all shadow-2xs flex items-center gap-1"
                     >
                       Details & Customizer <ArrowRight className="w-3.5 h-3.5" />
                     </Link>

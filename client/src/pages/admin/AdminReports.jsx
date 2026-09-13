@@ -50,7 +50,7 @@ export default function AdminReports() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 pb-6">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
             Executive Analytics
           </span>
           <h1 className="text-3xl font-bold font-display text-slate-900 mt-2">
@@ -63,7 +63,7 @@ export default function AdminReports() {
 
         <button
           onClick={handleDownloadCsv}
-          className="px-5 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer shrink-0"
+          className="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm shadow-blue-600/25 transition-all cursor-pointer shrink-0"
         >
           <Download className="w-4 h-4" /> Export Full Dataset (CSV)
         </button>
@@ -73,7 +73,7 @@ export default function AdminReports() {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
           <span className="text-[11px] font-bold uppercase text-slate-400">Total Revenue Settled</span>
-          <p className="text-2xl font-extrabold text-teal-700 font-display mt-1">
+          <p className="text-2xl font-extrabold text-blue-700 font-display mt-1">
             {overview.totalRevenueLKR.toLocaleString()} <span className="text-xs font-normal text-slate-500">LKR</span>
           </p>
         </div>
@@ -100,7 +100,7 @@ export default function AdminReports() {
       {/* Chart 1: Revenue Over Time */}
       <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-4">
         <div>
-          <span className="text-[10px] font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-0.5 rounded">
+          <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded">
             Financial Trajectory
           </span>
           <h2 className="text-xl font-bold font-display text-slate-900 mt-1">
@@ -116,8 +116,8 @@ export default function AdminReports() {
             <AreaChart data={revenueTrends} margin={{ top: 10, right: 30, left: 20, bottom: 0 }}>
               <defs>
                 <linearGradient id="revenueGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#0891b2" stopOpacity={0.4} />
-                  <stop offset="95%" stopColor="#0891b2" stopOpacity={0.0} />
+                  <stop offset="5%" stopColor="#1d4ed8" stopOpacity={0.4} />
+                  <stop offset="95%" stopColor="#1d4ed8" stopOpacity={0.0} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
@@ -133,7 +133,7 @@ export default function AdminReports() {
               <Area
                 type="monotone"
                 dataKey="revenue"
-                stroke="#0891b2"
+                stroke="#1d4ed8"
                 strokeWidth={3}
                 fillOpacity={1}
                 fill="url(#revenueGradient)"
@@ -149,7 +149,7 @@ export default function AdminReports() {
         {/* Chart 2: Bookings by Destination */}
         <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-4">
           <div>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-0.5 rounded">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded">
               Route Popularity
             </span>
             <h2 className="text-lg font-bold font-display text-slate-900 mt-1">
@@ -170,7 +170,7 @@ export default function AdminReports() {
                   formatter={(val) => [val, 'Bookings']}
                   contentStyle={{ borderRadius: '12px', border: '1px solid #e2e8f0', fontSize: '12px' }}
                 />
-                <Bar dataKey="count" fill="#f97316" radius={[6, 6, 0, 0]} />
+                <Bar dataKey="count" fill="#2563eb" radius={[6, 6, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -179,7 +179,7 @@ export default function AdminReports() {
         {/* Chart 3: Customer Growth Over Time */}
         <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-4">
           <div>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-0.5 rounded">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded">
               Platform Growth
             </span>
             <h2 className="text-lg font-bold font-display text-slate-900 mt-1">
@@ -203,9 +203,9 @@ export default function AdminReports() {
                 <Line
                   type="monotone"
                   dataKey="customers"
-                  stroke="#10b981"
+                  stroke="#0284c7"
                   strokeWidth={3}
-                  dot={{ r: 4, fill: '#10b981' }}
+                  dot={{ r: 4, fill: '#0284c7' }}
                 />
               </LineChart>
             </ResponsiveContainer>

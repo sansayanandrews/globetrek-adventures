@@ -37,7 +37,7 @@ export default function AdminAuditLog() {
       
       {/* Header */}
       <div className="border-b border-slate-200/80 pb-6">
-        <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+        <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
           Security & Compliance
         </span>
         <h1 className="text-3xl font-bold font-display text-slate-900 mt-2">
@@ -57,7 +57,7 @@ export default function AdminAuditLog() {
             placeholder="Search audit trail by actor, action, or target..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:outline-hidden focus:border-teal-500 shadow-2xs"
+            className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:outline-hidden focus:border-blue-500 shadow-2xs"
           />
         </div>
         <span className="text-xs text-slate-500 font-medium">
@@ -86,7 +86,7 @@ export default function AdminAuditLog() {
                   </td>
                   <td className="px-6 py-4">
                     <strong className="text-slate-900 block">{log.actor?.full_name}</strong>
-                    <span className="text-[10px] uppercase font-bold text-teal-700 bg-teal-50 px-1.5 py-0.5 rounded">
+                    <span className="text-[10px] uppercase font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">
                       {log.actor?.role}
                     </span>
                   </td>
@@ -96,7 +96,7 @@ export default function AdminAuditLog() {
                         log.action.includes('CONFIRMED') || log.action.includes('ACTIVATED')
                           ? 'bg-emerald-100 text-emerald-800'
                           : log.action.includes('CREATED')
-                          ? 'bg-teal-100 text-teal-800'
+                          ? 'bg-blue-100 text-blue-800'
                           : log.action.includes('CANCEL') || log.action.includes('DEACTIVATED')
                           ? 'bg-rose-100 text-rose-800'
                           : 'bg-slate-100 text-slate-700'

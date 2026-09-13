@@ -90,7 +90,7 @@ export default function AdminStaffManagement() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 pb-6">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
             User Administration
           </span>
           <h1 className="text-3xl font-bold font-display text-slate-900 mt-2">
@@ -103,7 +103,7 @@ export default function AdminStaffManagement() {
 
         <button
           onClick={() => setIsModalOpen(true)}
-          className="px-5 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer"
+          className="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer"
         >
           <UserPlus className="w-4 h-4" /> Provision New Staff Account
         </button>
@@ -118,7 +118,7 @@ export default function AdminStaffManagement() {
             placeholder="Search staff by name or email..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:outline-hidden focus:border-teal-500 shadow-2xs"
+            className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:outline-hidden focus:border-blue-500 shadow-2xs"
           />
         </div>
         <span className="text-xs text-slate-500 font-medium">
@@ -147,12 +147,12 @@ export default function AdminStaffManagement() {
                   <tr key={s.id} className="hover:bg-slate-50/80 transition-colors">
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-full bg-teal-100 text-teal-800 font-bold flex items-center justify-center text-xs">
+                        <div className="w-9 h-9 rounded-full bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-xs">
                           {s.full_name.charAt(0)}
                         </div>
                         <div>
                           <strong className="text-slate-900 font-bold block">
-                            {s.full_name} {isSelf && <span className="text-[10px] text-teal-600">(You)</span>}
+                            {s.full_name} {isSelf && <span className="text-[10px] text-blue-600">(You)</span>}
                           </strong>
                           <span className="text-slate-400 text-[11px]">{s.email}</span>
                         </div>
@@ -163,7 +163,7 @@ export default function AdminStaffManagement() {
                         className={`inline-block px-2.5 py-0.5 rounded uppercase font-bold text-[10px] ${
                           s.role === 'admin'
                             ? 'bg-purple-100 text-purple-800'
-                            : 'bg-teal-100 text-teal-800'
+                            : 'bg-blue-100 text-blue-800'
                         }`}
                       >
                         {s.role}
@@ -221,7 +221,7 @@ export default function AdminStaffManagement() {
             </button>
 
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-0.5 rounded">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded">
                 Provisioning
               </span>
               <h2 className="text-xl font-bold font-display text-slate-900 mt-2">
@@ -241,7 +241,7 @@ export default function AdminStaffManagement() {
                   placeholder="e.g. Kasun Jayawardena"
                   value={formData.full_name}
                   onChange={(e) => setFormData({ ...formData, full_name: e.target.value })}
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-teal-500 focus:outline-hidden font-medium"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-blue-500 focus:outline-hidden font-medium"
                 />
               </div>
 
@@ -253,7 +253,7 @@ export default function AdminStaffManagement() {
                   placeholder="kasun@globetrek.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-teal-500 focus:outline-hidden font-medium"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-blue-500 focus:outline-hidden font-medium"
                 />
               </div>
 
@@ -265,7 +265,7 @@ export default function AdminStaffManagement() {
                   placeholder="Create temporary password"
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-teal-500 focus:outline-hidden font-medium"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-blue-500 focus:outline-hidden font-medium"
                 />
               </div>
 
@@ -275,7 +275,7 @@ export default function AdminStaffManagement() {
                   <select
                     value={formData.role}
                     onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-teal-500 focus:outline-hidden font-semibold"
+                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-blue-500 focus:outline-hidden font-semibold"
                   >
                     <option value="staff">Staff (Operations)</option>
                     <option value="admin">Administrator (Executive)</option>
@@ -289,7 +289,7 @@ export default function AdminStaffManagement() {
                     placeholder="+94 77 123 4567"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-teal-500 focus:outline-hidden font-medium"
+                    className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-blue-500 focus:outline-hidden font-medium"
                   />
                 </div>
               </div>
@@ -305,7 +305,7 @@ export default function AdminStaffManagement() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="px-6 py-2.5 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl shadow-sm cursor-pointer disabled:opacity-50"
+                  className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-sm cursor-pointer disabled:opacity-50"
                 >
                   {submitting ? 'Creating...' : 'Create Account'}
                 </button>

@@ -38,7 +38,7 @@ export default function Accommodations() {
       
       {/* Header */}
       <div className="border-b border-slate-200/80 pb-6">
-        <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+        <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
           Partner Hospitality
         </span>
         <h1 className="text-3xl font-extrabold text-slate-900 font-display mt-2">
@@ -58,7 +58,7 @@ export default function Accommodations() {
               onClick={() => setSelectedType(t)}
               className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all ${
                 selectedType === t
-                  ? 'bg-teal-600 text-white shadow-2xs'
+                  ? 'bg-blue-600 text-white shadow-2xs'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
@@ -74,7 +74,7 @@ export default function Accommodations() {
             placeholder="Search by hotel or town..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+            className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-hidden"
           />
         </div>
       </div>
@@ -95,7 +95,7 @@ export default function Accommodations() {
             >
               <div className="p-6">
                 <div className="flex justify-between items-start mb-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-0.5 rounded">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
                     {acc.type}
                   </span>
                   <span className="text-xs font-bold text-amber-600 flex items-center gap-1 bg-amber-50 px-2 py-0.5 rounded">
@@ -107,18 +107,18 @@ export default function Accommodations() {
                   {acc.name}
                 </h3>
                 <p className="text-xs text-slate-500 flex items-center gap-1 mb-4">
-                  <MapPin className="w-3.5 h-3.5 text-teal-600 shrink-0" /> {acc.location}
+                  <MapPin className="w-3.5 h-3.5 text-blue-600 shrink-0" /> {acc.location}
                 </p>
 
                 <div className="space-y-1.5 text-[11px] text-slate-600 border-t border-slate-100 pt-3">
                   <div className="flex items-center gap-1.5">
-                    <Check className="w-3.5 h-3.5 text-teal-600" /> Private en-suite bathroom
+                    <Check className="w-3.5 h-3.5 text-blue-600" /> Private en-suite bathroom
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <Check className="w-3.5 h-3.5 text-teal-600" /> Complimentary Ceylon breakfast
+                    <Check className="w-3.5 h-3.5 text-blue-600" /> Complimentary Ceylon breakfast
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <Check className="w-3.5 h-3.5 text-teal-600" /> High-speed Wi-Fi included
+                    <Check className="w-3.5 h-3.5 text-blue-600" /> High-speed Wi-Fi included
                   </div>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function Accommodations() {
               <div className="p-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] text-slate-400 block uppercase font-medium">Nightly Rate</span>
-                  <span className="text-sm font-extrabold text-teal-700">
+                  <span className="text-sm font-extrabold text-blue-700">
                     {acc.price_per_night_lkr.toLocaleString()} LKR
                   </span>
                 </div>

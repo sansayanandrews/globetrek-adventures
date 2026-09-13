@@ -74,19 +74,19 @@ export default function Home() {
             alt="Sri Lanka Highlands & Coastline"
             className="w-full h-full object-cover object-center scale-105 animate-pulse duration-10000 opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-teal-950/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-blue-950/50" />
         </div>
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/20 border border-teal-400/30 text-teal-300 text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-sm">
             <Sparkles className="w-3.5 h-3.5" />
-            Bespoke Sri Lankan Journeys � Based in Negombo
+            Bespoke Sri Lankan Journeys &bull; Based in Negombo
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-display tracking-tight leading-tight sm:leading-none mb-6">
-            Discover Sri Lanka�s Wonders, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-teal-100 to-amber-300">
+            Discover Sri Lanka's Wonders, <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-sky-100 to-white">
               Tailored Exactly for You
             </span>
           </h1>
@@ -101,7 +101,7 @@ export default function Home() {
             className="bg-white/95 backdrop-blur-md p-3 sm:p-4 rounded-2xl shadow-2xl border border-white/20 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left"
           >
             <div className="flex items-center gap-3 px-4 py-3 bg-slate-50 rounded-xl border border-slate-200">
-              <MapPin className="w-5 h-5 text-teal-600 shrink-0" />
+              <MapPin className="w-5 h-5 text-blue-600 shrink-0" />
               <div className="flex-1">
                 <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-400">
                   Destination
@@ -117,7 +117,7 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-3 px-4 py-3 bg-slate-50 rounded-xl border border-slate-200">
-              <Compass className="w-5 h-5 text-teal-600 shrink-0" />
+              <Compass className="w-5 h-5 text-blue-600 shrink-0" />
               <div className="flex-1">
                 <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-400">
                   Travel Category
@@ -139,7 +139,7 @@ export default function Home() {
 
             <button
               type="submit"
-              className="flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-bold py-3 px-6 rounded-xl shadow-md shadow-teal-600/30 hover:shadow-lg transition-all text-sm sm:text-base cursor-pointer"
+              className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-6 rounded-xl shadow-md shadow-blue-600/30 hover:shadow-lg transition-all text-sm sm:text-base cursor-pointer"
             >
               <Search className="w-5 h-5" />
               Find Packages
@@ -149,13 +149,13 @@ export default function Home() {
           {/* Quick stats / guarantees */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-slate-400 font-medium">
             <span className="flex items-center gap-1.5">
-              <Shield className="w-4 h-4 text-teal-400" /> SLTDA Licensed Guides
+              <Shield className="w-4 h-4 text-blue-400" /> SLTDA Licensed Guides
             </span>
             <span className="flex items-center gap-1.5">
               <Star className="w-4 h-4 text-amber-400 fill-amber-400" /> 4.9/5 Traveler Satisfaction
             </span>
             <span className="flex items-center gap-1.5">
-              <Clock className="w-4 h-4 text-teal-400" /> Live Price Calculation in LKR
+              <Clock className="w-4 h-4 text-blue-400" /> Live Price Calculation in LKR
             </span>
           </div>
 
@@ -166,7 +166,7 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
               Signature Itineraries
             </span>
             <h2 className="text-3xl font-extrabold text-slate-900 mt-2 font-display">
@@ -178,7 +178,7 @@ export default function Home() {
           </div>
           <Link
             to="/packages"
-            className="inline-flex items-center gap-1.5 text-sm font-bold text-teal-700 hover:text-teal-800 group"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-700 hover:text-blue-800 group"
           >
             View All Packages <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
@@ -208,12 +208,12 @@ export default function Home() {
                     <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/90 text-slate-800 shadow-xs backdrop-blur-xs">
                       {pkg.category}
                     </span>
-                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-teal-600/90 text-white shadow-xs backdrop-blur-xs">
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-600/90 text-white shadow-xs backdrop-blur-xs">
                       {pkg.duration_days} Days / {pkg.duration_days - 1} Nights
                     </span>
                   </div>
                   <div className="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-xs px-2.5 py-1 rounded-lg text-white text-xs flex items-center gap-1">
-                    <MapPin className="w-3.5 h-3.5 text-teal-400" />
+                    <MapPin className="w-3.5 h-3.5 text-blue-400" />
                     <span>{pkg.destination}</span>
                   </div>
                 </div>
@@ -221,7 +221,7 @@ export default function Home() {
                 {/* Card Body */}
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-teal-600 transition-colors font-display line-clamp-1 mb-2">
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors font-display line-clamp-1 mb-2">
                       {pkg.title}
                     </h3>
                     <p className="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
@@ -234,13 +234,13 @@ export default function Home() {
                       <span className="text-[11px] font-medium text-slate-400 block uppercase">
                         Starting From
                       </span>
-                      <span className="text-lg font-extrabold text-teal-700">
+                      <span className="text-lg font-extrabold text-blue-700">
                         {pkg.base_price_lkr.toLocaleString()} <span className="text-xs font-normal text-slate-500">LKR</span>
                       </span>
                     </div>
                     <Link
                       to={`/packages/${pkg.slug}`}
-                      className="px-4 py-2 bg-teal-50 hover:bg-teal-600 text-teal-700 hover:text-white rounded-xl text-xs font-bold transition-all shadow-2xs"
+                      className="px-4 py-2 bg-blue-50 hover:bg-blue-600 text-blue-700 hover:text-white rounded-xl text-xs font-bold transition-all shadow-2xs"
                     >
                       View & Customize
                     </Link>
@@ -256,11 +256,11 @@ export default function Home() {
       <section className="bg-slate-100/70 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
               Iconic Sri Lanka
             </span>
             <h2 className="text-3xl font-extrabold text-slate-900 mt-2 font-display">
-              Destinations on Every Traveler�s Dream List
+              Destinations on Every Traveler's Dream List
             </h2>
             <p className="text-slate-600 text-sm mt-2">
               From rocky citadel heights to golden coastlines and wildlife reserves.
@@ -281,7 +281,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/30 to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 text-white">
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-teal-500/80 mb-2 inline-block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-blue-600/90 mb-2 inline-block">
                     {dest.tag}
                   </span>
                   <h3 className="text-xl font-bold font-display">{dest.name}</h3>
@@ -297,7 +297,7 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
               Why GlobeTrek
             </span>
             <h2 className="text-3xl font-extrabold text-slate-900 mt-2 mb-6 font-display leading-tight">
@@ -309,7 +309,7 @@ export default function Home() {
 
             <div className="space-y-4">
               <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-100 shadow-2xs">
-                <div className="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
                   <Award className="w-5 h-5" />
                 </div>
                 <div>
@@ -323,7 +323,7 @@ export default function Home() {
               </div>
 
               <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-100 shadow-2xs">
-                <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center shrink-0 border border-blue-100">
                   <Shield className="w-5 h-5" />
                 </div>
                 <div>
@@ -337,7 +337,7 @@ export default function Home() {
               </div>
 
               <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-100 shadow-2xs">
-                <div className="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
@@ -373,8 +373,8 @@ export default function Home() {
               <p className="text-xs text-slate-600 font-medium">
                 "Our driver was exceptional. From Negombo to Ella and Yala, every accommodation and excursion was flawlessly planned."
               </p>
-              <span className="text-[11px] font-bold text-teal-600 mt-2 block">
-                � Sarah & Mark, UK
+              <span className="text-[11px] font-bold text-blue-600 mt-2 block">
+                &bull; Sarah & Mark, UK
               </span>
             </div>
           </div>
@@ -383,9 +383,9 @@ export default function Home() {
 
       {/* Call To Action Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-teal-800 via-teal-700 to-slate-900 p-8 sm:p-14 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="rounded-3xl bg-gradient-to-r from-blue-900 via-blue-800 to-slate-900 p-8 sm:p-14 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 border border-blue-700/30">
           <div className="max-w-xl">
-            <span className="text-xs font-bold tracking-wider uppercase text-amber-300">
+            <span className="text-xs font-bold tracking-wider uppercase text-blue-300">
               Start Your Journey Today
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display mt-2 mb-4 leading-tight">
@@ -399,7 +399,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <Link
               to="/packages"
-              className="px-6 py-3.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-xl shadow-md text-sm text-center transition-all"
+              className="px-6 py-3.5 bg-white hover:bg-blue-50 text-blue-900 font-bold rounded-xl shadow-md text-sm text-center transition-all"
             >
               Browse All Packages
             </Link>

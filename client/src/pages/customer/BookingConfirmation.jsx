@@ -37,7 +37,7 @@ export default function BookingConfirmation() {
     return (
       <div className="max-w-md mx-auto px-4 py-24 text-center">
         <h2 className="text-xl font-bold font-display text-slate-900">Booking Record Not Found</h2>
-        <Link to="/dashboard" className="mt-4 inline-block px-5 py-2 bg-teal-600 text-white rounded-xl text-xs font-bold">
+        <Link to="/dashboard" className="mt-4 inline-block px-5 py-2 bg-blue-600 text-white rounded-xl text-xs font-bold">
           Go to Dashboard
         </Link>
       </div>
@@ -74,7 +74,7 @@ export default function BookingConfirmation() {
             <h2 className="text-xl font-extrabold font-display text-slate-900">
               Booking Ref: #GT-BKG-{booking.id.toString().padStart(5, '0')}
             </h2>
-            <span className="text-xs text-teal-700 font-semibold">
+            <span className="text-xs text-blue-700 font-semibold">
               Simulated Txn: {payment?.transaction_ref || 'GT-TXN-PENDING'}
             </span>
           </div>
@@ -132,8 +132,8 @@ export default function BookingConfirmation() {
         </div>
 
         {booking.coordination_notes && (
-          <div className="p-4 bg-teal-50 rounded-2xl border border-teal-200 text-xs text-teal-900 space-y-1">
-            <span className="font-bold block text-teal-950">Coordination & Dispatch Status:</span>
+          <div className="p-4 bg-blue-50 rounded-2xl border border-blue-200 text-xs text-blue-900 space-y-1">
+            <span className="font-bold block text-blue-950">Coordination & Dispatch Status:</span>
             <p>{booking.coordination_notes}</p>
           </div>
         )}
@@ -149,7 +149,7 @@ export default function BookingConfirmation() {
           </div>
           <div className="pt-2 border-t border-slate-200 flex justify-between items-center text-sm font-bold text-slate-900">
             <span>Total Settled (Simulated Card):</span>
-            <span className="text-xl font-extrabold text-teal-700 font-display">
+            <span className="text-xl font-extrabold text-blue-700 font-display">
               {booking.total_price_lkr.toLocaleString()} LKR
             </span>
           </div>
@@ -157,7 +157,7 @@ export default function BookingConfirmation() {
 
         <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
           <span className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-teal-600" /> Negombo Operations Hub • SLTDA License #TA/2026/0488
+            <ShieldCheck className="w-4 h-4 text-blue-600" /> Negombo Operations Hub • SLTDA License #TA/2026/0488
           </span>
           <span>Hotline: +94 31 222 4500</span>
         </div>
@@ -173,7 +173,7 @@ export default function BookingConfirmation() {
 
         <Link
           to="/dashboard"
-          className="px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm transition-all"
+          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm transition-all"
         >
           <Home className="w-4 h-4" /> Return to Customer Dashboard
         </Link>

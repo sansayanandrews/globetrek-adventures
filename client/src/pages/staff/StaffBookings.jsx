@@ -78,7 +78,7 @@ export default function StaffBookings() {
       
       {/* Header */}
       <div className="border-b border-slate-200/80 pb-6">
-        <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+        <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
           Operations & Dispatch
         </span>
         <h1 className="text-3xl font-bold font-display text-slate-900 mt-2">
@@ -98,7 +98,7 @@ export default function StaffBookings() {
               onClick={() => setStatusFilter(st)}
               className={`px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
                 statusFilter === st
-                  ? 'bg-teal-600 text-white shadow-2xs'
+                  ? 'bg-blue-600 text-white shadow-2xs'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
@@ -114,7 +114,7 @@ export default function StaffBookings() {
             placeholder="Search by name, email, tour..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+            className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-500 focus:outline-hidden"
           />
         </div>
       </div>
@@ -158,13 +158,13 @@ export default function StaffBookings() {
                           ? 'bg-amber-100 text-amber-800'
                           : b.status === 'cancelled'
                           ? 'bg-rose-100 text-rose-800'
-                          : 'bg-teal-100 text-teal-800'
+                          : 'bg-blue-100 text-blue-800'
                       }`}
                     >
                       {b.status}
                     </span>
                   </td>
-                  <td className="px-6 py-4 font-bold text-teal-800">
+                  <td className="px-6 py-4 font-bold text-blue-800">
                     {b.total_price_lkr.toLocaleString()} LKR
                   </td>
                   <td className="px-6 py-4 max-w-xs">
@@ -175,7 +175,7 @@ export default function StaffBookings() {
                   <td className="px-6 py-4 text-right">
                     <button
                       onClick={() => openCoordinationModal(b)}
-                      className="px-3 py-1.5 bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-bold text-[11px] rounded-lg transition-colors border border-slate-200"
+                      className="px-3 py-1.5 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-700 font-bold text-[11px] rounded-lg transition-colors border border-slate-200"
                     >
                       Coordinate / Manage
                     </button>
@@ -199,7 +199,7 @@ export default function StaffBookings() {
             </button>
 
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-0.5 rounded">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded">
                 Dispatch Management
               </span>
               <h2 className="text-xl font-bold font-display text-slate-900 mt-2">
@@ -227,7 +227,7 @@ export default function StaffBookings() {
               </div>
               <div>
                 <span className="text-slate-400 uppercase font-bold text-[10px] block">Total Settled</span>
-                <strong className="text-teal-700">{selectedBooking.total_price_lkr.toLocaleString()} LKR</strong>
+                <strong className="text-blue-700">{selectedBooking.total_price_lkr.toLocaleString()} LKR</strong>
               </div>
             </div>
 
@@ -241,7 +241,7 @@ export default function StaffBookings() {
                 value={notesInput}
                 onChange={(e) => setNotesInput(e.target.value)}
                 placeholder="e.g. Hotel vouchers sent to Aliya Resort. Assigned Chauffeur Mr. Ranjith (+94 77 444 3322) with Toyota KDH Van."
-                className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium focus:bg-white focus:border-blue-500 focus:outline-hidden"
               />
               <span className="text-[10px] text-slate-400 block mt-1">
                 These notes appear on the customer's dashboard and voucher once confirmed.
@@ -266,7 +266,7 @@ export default function StaffBookings() {
                   type="button"
                   disabled={saving}
                   onClick={() => handleUpdateStatus(selectedBooking.id, 'completed', notesInput)}
-                  className="py-2.5 px-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-sm"
+                  className="py-2.5 px-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-sm"
                 >
                   Mark Completed
                 </button>

@@ -171,35 +171,35 @@ export default function CustomizeBooking() {
         <div className="flex items-center justify-between max-w-2xl mx-auto">
           <div className="flex items-center gap-2">
             <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
-              step >= 1 ? 'bg-teal-600 text-white' : 'bg-slate-100 text-slate-500'
+              step >= 1 ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-500'
             }`}>
               1
             </div>
-            <span className={`text-xs font-bold hidden sm:inline ${step >= 1 ? 'text-teal-700' : 'text-slate-400'}`}>
+            <span className={`text-xs font-bold hidden sm:inline ${step >= 1 ? 'text-blue-700' : 'text-slate-400'}`}>
               Customize Trip
             </span>
           </div>
-          <div className={`h-1 flex-1 mx-3 rounded ${step >= 2 ? 'bg-teal-600' : 'bg-slate-200'}`} />
+          <div className={`h-1 flex-1 mx-3 rounded ${step >= 2 ? 'bg-blue-600' : 'bg-slate-200'}`} />
 
           <div className="flex items-center gap-2">
             <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
-              step >= 2 ? 'bg-teal-600 text-white' : 'bg-slate-100 text-slate-500'
+              step >= 2 ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-500'
             }`}>
               2
             </div>
-            <span className={`text-xs font-bold hidden sm:inline ${step >= 2 ? 'text-teal-700' : 'text-slate-400'}`}>
+            <span className={`text-xs font-bold hidden sm:inline ${step >= 2 ? 'text-blue-700' : 'text-slate-400'}`}>
               Review & Price
             </span>
           </div>
-          <div className={`h-1 flex-1 mx-3 rounded ${step >= 3 ? 'bg-teal-600' : 'bg-slate-200'}`} />
+          <div className={`h-1 flex-1 mx-3 rounded ${step >= 3 ? 'bg-blue-600' : 'bg-slate-200'}`} />
 
           <div className="flex items-center gap-2">
             <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
-              step >= 3 ? 'bg-teal-600 text-white' : 'bg-slate-100 text-slate-500'
+              step >= 3 ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-500'
             }`}>
               3
             </div>
-            <span className={`text-xs font-bold hidden sm:inline ${step >= 3 ? 'text-teal-700' : 'text-slate-400'}`}>
+            <span className={`text-xs font-bold hidden sm:inline ${step >= 3 ? 'text-blue-700' : 'text-slate-400'}`}>
               Simulated Payment
             </span>
           </div>
@@ -218,7 +218,7 @@ export default function CustomizeBooking() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-0.5 rounded">
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded">
                 Step 1 of 3
               </span>
               <h2 className="text-2xl font-bold font-display text-slate-900 mt-2">
@@ -237,7 +237,7 @@ export default function CustomizeBooking() {
                 min={new Date().toISOString().split('T')[0]}
                 value={travelDate}
                 onChange={(e) => setTravelDate(e.target.value)}
-                className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:bg-white focus:border-teal-500 focus:outline-hidden cursor-pointer"
+                className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:bg-white focus:border-blue-500 focus:outline-hidden cursor-pointer"
               />
             </div>
 
@@ -278,7 +278,7 @@ export default function CustomizeBooking() {
                     key={item.id}
                     className={`flex items-center justify-between p-4 rounded-xl border cursor-pointer transition-all ${
                       selectedAccId === item.accommodation_id
-                        ? 'border-teal-600 bg-teal-50/60 shadow-xs'
+                        ? 'border-blue-600 bg-blue-50/60 shadow-xs'
                         : 'border-slate-200 bg-white hover:bg-slate-50'
                     }`}
                   >
@@ -288,7 +288,7 @@ export default function CustomizeBooking() {
                         name="acc"
                         checked={selectedAccId === item.accommodation_id}
                         onChange={() => setSelectedAccId(item.accommodation_id)}
-                        className="accent-teal-600 w-4 h-4"
+                        className="accent-blue-600 w-4 h-4"
                       />
                       <div>
                         <strong className="text-xs font-bold text-slate-900 block font-display">
@@ -297,7 +297,7 @@ export default function CustomizeBooking() {
                         <span className="text-[11px] text-slate-500">{item.accommodation.location}</span>
                       </div>
                     </div>
-                    <span className="text-xs font-extrabold text-teal-800">
+                    <span className="text-xs font-extrabold text-blue-800">
                       {item.accommodation.price_per_night_lkr.toLocaleString()} LKR/nt
                     </span>
                   </label>
@@ -316,7 +316,7 @@ export default function CustomizeBooking() {
                     key={item.id}
                     className={`flex items-center justify-between p-4 rounded-xl border cursor-pointer transition-all ${
                       selectedTransId === item.transportation_id
-                        ? 'border-teal-600 bg-teal-50/60 shadow-xs'
+                        ? 'border-blue-600 bg-blue-50/60 shadow-xs'
                         : 'border-slate-200 bg-white hover:bg-slate-50'
                     }`}
                   >
@@ -326,7 +326,7 @@ export default function CustomizeBooking() {
                         name="trans"
                         checked={selectedTransId === item.transportation_id}
                         onChange={() => setSelectedTransId(item.transportation_id)}
-                        className="accent-teal-600 w-4 h-4"
+                        className="accent-blue-600 w-4 h-4"
                       />
                       <div>
                         <strong className="text-xs font-bold text-slate-900 block font-display">
@@ -335,7 +335,7 @@ export default function CustomizeBooking() {
                         <span className="text-[11px] text-slate-500">{item.transportation.provider_name}</span>
                       </div>
                     </div>
-                    <span className="text-xs font-extrabold text-teal-800">
+                    <span className="text-xs font-extrabold text-blue-800">
                       +{item.transportation.price_lkr.toLocaleString()} LKR
                     </span>
                   </label>
@@ -356,7 +356,7 @@ export default function CustomizeBooking() {
                     onClick={() => setExtraNights(n)}
                     className={`py-2 px-4 rounded-xl text-xs font-bold transition-all ${
                       extraNights === n
-                        ? 'bg-teal-600 text-white shadow-xs'
+                        ? 'bg-blue-600 text-white shadow-xs'
                         : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                     }`}
                   >
@@ -376,7 +376,7 @@ export default function CustomizeBooking() {
                 placeholder="e.g. Vegetarian/halal meal preference, airport pickup flight details, infant car seat..."
                 value={specialRequests}
                 onChange={(e) => setSpecialRequests(e.target.value)}
-                className="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                className="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-hidden"
               />
             </div>
 
@@ -384,7 +384,7 @@ export default function CustomizeBooking() {
               <button
                 type="button"
                 onClick={() => setStep(2)}
-                className="px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer"
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer"
               >
                 Review & Price Summary <ArrowRight className="w-4 h-4" />
               </button>
@@ -416,15 +416,15 @@ export default function CustomizeBooking() {
               )}
               <div className="pt-3 border-t border-slate-200 flex justify-between items-center text-slate-900">
                 <span className="font-bold text-sm">Estimated Total:</span>
-                <span className="text-xl font-extrabold text-teal-700 font-display">
+                <span className="text-xl font-extrabold text-blue-700 font-display">
                   {totalLKR.toLocaleString()} <span className="text-xs font-medium text-slate-500">LKR</span>
                 </span>
               </div>
             </div>
 
-            <div className="p-3 bg-teal-50 rounded-xl border border-teal-100 text-[11px] text-teal-800 space-y-1">
+            <div className="p-3 bg-blue-50 rounded-xl border border-blue-100 text-[11px] text-blue-800 space-y-1">
               <div className="font-bold flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-teal-600" /> Sri Lankan Rupees (LKR)
+                <ShieldCheck className="w-3.5 h-3.5 text-blue-600" /> Sri Lankan Rupees (LKR)
               </div>
               <p>All rates include taxes and chauffeur coordination services.</p>
             </div>
@@ -436,7 +436,7 @@ export default function CustomizeBooking() {
       {step === 2 && (
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-xs space-y-6 max-w-3xl mx-auto">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-0.5 rounded">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded">
               Step 2 of 3
             </span>
             <h2 className="text-2xl font-bold font-display text-slate-900 mt-2">
@@ -479,7 +479,7 @@ export default function CustomizeBooking() {
             )}
             <div className="pt-3 border-t border-slate-200 flex justify-between items-center text-sm font-bold text-slate-900">
               <span>Total Payable Amount:</span>
-              <span className="text-2xl font-extrabold text-teal-700 font-display">
+              <span className="text-2xl font-extrabold text-blue-700 font-display">
                 {totalLKR.toLocaleString()} LKR
               </span>
             </div>
@@ -496,7 +496,7 @@ export default function CustomizeBooking() {
             <button
               type="button"
               onClick={() => setStep(3)}
-              className="px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer"
             >
               Proceed to Simulated Payment <ArrowRight className="w-4 h-4" />
             </button>
@@ -508,7 +508,7 @@ export default function CustomizeBooking() {
       {step === 3 && (
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-md space-y-6 max-w-2xl mx-auto">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-0.5 rounded">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded">
               Step 3 of 3
             </span>
             <h2 className="text-2xl font-bold font-display text-slate-900 mt-2">
@@ -541,7 +541,7 @@ export default function CustomizeBooking() {
                 placeholder="e.g. Amara Perera"
                 value={cardholderName}
                 onChange={(e) => setCardholderName(e.target.value)}
-                className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-hidden"
               />
             </div>
 
@@ -557,7 +557,7 @@ export default function CustomizeBooking() {
                   placeholder="4532 8812 9043 2198"
                   value={cardNumber}
                   onChange={(e) => setCardNumber(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-teal-500 focus:outline-hidden font-mono"
+                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-hidden font-mono"
                 />
               </div>
             </div>
@@ -573,7 +573,7 @@ export default function CustomizeBooking() {
                   placeholder="12/28"
                   value={expiry}
                   onChange={(e) => setExpiry(e.target.value)}
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-teal-500 focus:outline-hidden font-mono"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-hidden font-mono"
                 />
               </div>
 
@@ -590,7 +590,7 @@ export default function CustomizeBooking() {
                     placeholder="842"
                     value={cvv}
                     onChange={(e) => setCvv(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-teal-500 focus:outline-hidden font-mono"
+                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-hidden font-mono"
                   />
                 </div>
               </div>
@@ -599,7 +599,7 @@ export default function CustomizeBooking() {
             <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex justify-between items-center">
               <div>
                 <span className="text-[10px] font-bold uppercase text-slate-400 block">Total to Charge</span>
-                <span className="text-xl font-extrabold text-teal-700 font-display">
+                <span className="text-xl font-extrabold text-blue-700 font-display">
                   {totalLKR.toLocaleString()} LKR
                 </span>
               </div>
@@ -619,7 +619,7 @@ export default function CustomizeBooking() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="px-8 py-3 bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-md shadow-teal-600/30 transition-all cursor-pointer disabled:opacity-50"
+                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-md shadow-blue-600/30 transition-all cursor-pointer disabled:opacity-50"
               >
                 {submitting ? 'Processing Simulation...' : `Pay ${totalLKR.toLocaleString()} LKR & Confirm`}
               </button>

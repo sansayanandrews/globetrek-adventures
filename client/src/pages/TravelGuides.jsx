@@ -10,7 +10,7 @@ export default function TravelGuides() {
       title: 'Sri Lanka Weather & Monsoon Calendar: Month-by-Month Planning',
       category: 'Seasonal Advice',
       readTime: '6 min read',
-      date: 'September 2026',
+      date: 'September© 2026',
       image: 'https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=800&q=80',
       summary: 'Understanding Sri Lanka�s dual monsoon system is the secret to having sunshine year-round. Discover when to visit the southern beaches vs the cultural triangle.',
       content: `
@@ -30,7 +30,7 @@ Because Sri Lanka is an equatorial island with a mountainous central massif, it 
       title: 'Climbing Sigiriya & Exploring Ancient Polonnaruwa: Insider Guide',
       category: 'Cultural Heritage',
       readTime: '8 min read',
-      date: 'August 2026',
+      date: 'August© 2026',
       image: 'https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?auto=format&fit=crop&w=800&q=80',
       summary: 'How to conquer the 1,200 steps of Sigiriya Lion Rock Fortress at dawn, navigate the ancient royal capital by bicycle, and adhere to sacred temple etiquette.',
       content: `
@@ -52,7 +52,7 @@ When entering Dambulla Cave Temple or Kandy Tooth Relic:
       title: 'Yala National Park Safari: Tracking Leopards & Elephants',
       category: 'Wildlife Expeditions',
       readTime: '7 min read',
-      date: 'July 2026',
+      date: 'July© 2026',
       image: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=800&q=80',
       summary: 'Yala boasts one of the highest leopard population densities on Earth. Learn how our custom 4x4 cruisers and tracker naturalists position you for once-in-a-lifetime encounters.',
       content: `
@@ -72,7 +72,7 @@ Our safari chauffeurs maintain safe distances, turn off vehicle engines near sen
       title: 'Negombo Beyond the Airport: Lagoons, Dutch Canals & Catamarans',
       category: 'Local Secrets',
       readTime: '5 min read',
-      date: 'June 2026',
+      date: 'June© 2026',
       image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
       summary: 'Why you should spend at least two days in Negombo before heading inland. Sail on traditional Oruwa catamarans and feast on fresh lagoon mud crabs.',
       content: `
@@ -90,7 +90,7 @@ Constructed by 17th-century Dutch colonists to transport cinnamon and spices to 
       
       {/* Header */}
       <div className="border-b border-slate-200/80 pb-6">
-        <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+        <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
           Traveler Insights
         </span>
         <h1 className="text-3xl font-extrabold text-slate-900 font-display mt-2">
@@ -129,7 +129,7 @@ Constructed by 17th-century Dutch colonists to transport cinnamon and spices to 
                   <span>�</span>
                   <span>{g.date}</span>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 font-display group-hover:text-teal-600 transition-colors mb-3">
+                <h3 className="text-xl font-bold text-slate-900 font-display group-hover:text-blue-600 transition-colors mb-3">
                   {g.title}
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
@@ -138,7 +138,7 @@ Constructed by 17th-century Dutch colonists to transport cinnamon and spices to 
               </div>
 
               <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-xs font-bold text-teal-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                <span className="text-xs font-bold text-blue-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                   Read Full Article <ChevronRight className="w-4 h-4" />
                 </span>
               </div>
@@ -159,7 +159,7 @@ Constructed by 17th-century Dutch colonists to transport cinnamon and spices to 
               <X className="w-5 h-5" />
             </button>
 
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">
               {activeArticle.category}
             </span>
             <h2 className="text-2xl font-extrabold text-slate-900 font-display mt-3 mb-2">

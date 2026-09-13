@@ -47,7 +47,7 @@ export default function AdminBookings() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 pb-6">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
             Master Oversight
           </span>
           <h1 className="text-3xl font-bold font-display text-slate-900 mt-2">
@@ -61,7 +61,7 @@ export default function AdminBookings() {
         <a
           href="/api/admin/export-csv"
           download
-          className="px-5 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all shrink-0"
+          className="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all shrink-0"
         >
           <Download className="w-4 h-4" /> Export Ledger to CSV
         </a>
@@ -74,8 +74,8 @@ export default function AdminBookings() {
           <p className="text-2xl font-extrabold text-slate-900 font-display mt-1">{filtered.length}</p>
         </div>
         <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
-          <span className="text-[11px] font-bold uppercase text-teal-600">Settled Revenue (LKR)</span>
-          <p className="text-2xl font-extrabold text-teal-700 font-display mt-1">{totalFilteredRevenue.toLocaleString()} LKR</p>
+          <span className="text-[11px] font-bold uppercase text-blue-600">Settled Revenue (LKR)</span>
+          <p className="text-2xl font-extrabold text-blue-700 font-display mt-1">{totalFilteredRevenue.toLocaleString()} LKR</p>
         </div>
         <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
           <span className="text-[11px] font-bold uppercase text-amber-600">Pending Approvals</span>
@@ -94,7 +94,7 @@ export default function AdminBookings() {
               onClick={() => setStatusFilter(st)}
               className={`px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
                 statusFilter === st
-                  ? 'bg-teal-600 text-white shadow-2xs'
+                  ? 'bg-blue-600 text-white shadow-2xs'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
@@ -110,7 +110,7 @@ export default function AdminBookings() {
             placeholder="Filter by customer, tour, ID..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+            className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-500 focus:outline-hidden"
           />
         </div>
       </div>
@@ -144,7 +144,7 @@ export default function AdminBookings() {
                     <span className="text-slate-400 text-[11px]">{b.num_travellers} Travelers</span>
                   </td>
                   <td className="px-6 py-4 text-slate-600">{b.travel_date}</td>
-                  <td className="px-6 py-4 font-extrabold text-teal-700">
+                  <td className="px-6 py-4 font-extrabold text-blue-700">
                     {b.total_price_lkr.toLocaleString()} LKR
                   </td>
                   <td className="px-6 py-4">
@@ -156,7 +156,7 @@ export default function AdminBookings() {
                           ? 'bg-amber-100 text-amber-800'
                           : b.status === 'cancelled'
                           ? 'bg-rose-100 text-rose-800'
-                          : 'bg-teal-100 text-teal-800'
+                          : 'bg-blue-100 text-blue-800'
                       }`}
                     >
                       {b.status}
@@ -168,7 +168,7 @@ export default function AdminBookings() {
                   <td className="px-6 py-4 text-right">
                     <Link
                       to={`/booking/confirmation/${b.id}`}
-                      className="inline-flex items-center gap-1 text-teal-700 hover:text-teal-900 font-bold"
+                      className="inline-flex items-center gap-1 text-blue-700 hover:text-blue-900 font-bold"
                     >
                       Receipt <ExternalLink className="w-3.5 h-3.5" />
                     </Link>

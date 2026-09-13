@@ -85,7 +85,7 @@ export default function StaffQueries() {
       
       {/* Header */}
       <div className="border-b border-slate-200/80 pb-6">
-        <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-md">
+        <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
           Client Support Desk
         </span>
         <h1 className="text-3xl font-bold font-display text-slate-900 mt-2">
@@ -105,7 +105,7 @@ export default function StaffQueries() {
               onClick={() => setStatusFilter(st)}
               className={`px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
                 statusFilter === st
-                  ? 'bg-teal-600 text-white shadow-2xs'
+                  ? 'bg-blue-600 text-white shadow-2xs'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
@@ -121,7 +121,7 @@ export default function StaffQueries() {
             placeholder="Search tickets..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:border-teal-500 focus:outline-hidden"
+            className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-500 focus:outline-hidden"
           />
         </div>
       </div>
@@ -173,18 +173,18 @@ export default function StaffQueries() {
               </div>
 
               {q.staff_response && (
-                <div className="p-3 bg-teal-50/70 border border-teal-200 rounded-xl text-xs space-y-1">
-                  <span className="font-bold text-teal-950 block">
+                <div className="p-3 bg-blue-50/70 border border-blue-200 rounded-xl text-xs space-y-1">
+                  <span className="font-bold text-blue-950 block">
                     Recorded Staff Reply (by {q.assigned_staff?.full_name || 'Agent'}):
                   </span>
-                  <p className="text-teal-900">{q.staff_response}</p>
+                  <p className="text-blue-900">{q.staff_response}</p>
                 </div>
               )}
 
               <div className="flex justify-end pt-2 border-t border-slate-100">
                 <button
                   onClick={() => openResponseModal(q)}
-                  className="px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center gap-1.5 shadow-2xs"
+                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center gap-1.5 shadow-2xs"
                 >
                   <Send className="w-3.5 h-3.5" /> {q.staff_response ? 'Update Staff Response' : 'Draft Response'}
                 </button>
@@ -206,7 +206,7 @@ export default function StaffQueries() {
             </button>
 
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-0.5 rounded">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded">
                 Support Desk Reply
               </span>
               <h2 className="text-xl font-bold font-display text-slate-900 mt-2">
@@ -232,7 +232,7 @@ export default function StaffQueries() {
                   placeholder="Dear traveler, thank you for reaching out to GlobeTrek Adventures Negombo..."
                   value={responseText}
                   onChange={(e) => setResponseText(e.target.value)}
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium focus:bg-white focus:border-blue-500 focus:outline-hidden"
                 />
               </div>
 
@@ -243,7 +243,7 @@ export default function StaffQueries() {
                 <select
                   value={statusInput}
                   onChange={(e) => setStatusInput(e.target.value)}
-                  className="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:bg-white focus:border-teal-500 focus:outline-hidden"
+                  className="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:bg-white focus:border-blue-500 focus:outline-hidden"
                 >
                   <option value="resolved">Resolved (Customer notified)</option>
                   <option value="in_progress">In Progress (Follow-up needed)</option>
@@ -262,7 +262,7 @@ export default function StaffQueries() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="px-6 py-2 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs flex items-center gap-1.5 shadow-sm cursor-pointer disabled:opacity-50"
+                  className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs flex items-center gap-1.5 shadow-sm cursor-pointer disabled:opacity-50"
                 >
                   <Send className="w-3.5 h-3.5" /> {submitting ? 'Saving...' : 'Send Response'}
                 </button>
