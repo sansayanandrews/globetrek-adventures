@@ -41,6 +41,8 @@ export default function App() {
       <Route element={<MainLayout />}>
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
+        <Route path="/app" element={<Home />} />
+        <Route path="/app.html" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/packages/:slug" element={<PackageDetail />} />

@@ -145,6 +145,13 @@ export default function Navbar() {
               </div>
             ) : (
               <div className="flex items-center gap-2.5">
+                <a
+                  href="/"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 bg-slate-100 hover:bg-blue-50 hover:text-blue-700 border border-slate-200 transition-all"
+                  title="Switch to Project Overview & Documentation"
+                >
+                  📋 Project Overview
+                </a>
                 <Link
                   to="/login"
                   className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors"
