@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Mail, Lock, LogIn, KeyRound, AlertCircle, CheckCircle2, X } from 'lucide-react';
+import { Mail, Lock, LogIn, AlertCircle, CheckCircle2, X } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
 import api from '../api/client';
@@ -50,12 +50,6 @@ export default function Login() {
     }
   };
 
-  const fillDemo = (demoEmail, demoPassword) => {
-    setEmail(demoEmail);
-    setPassword(demoPassword);
-    setError('');
-  };
-
   const handleForgotSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -91,38 +85,6 @@ export default function Login() {
             <span>{error}</span>
           </div>
         )}
-
-        {/* Demo Fast-Fill Pill Buttons */}
-        <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200/80 space-y-2">
-          <div className="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-slate-400">
-            <span className="flex items-center gap-1">
-              <KeyRound className="w-3.5 h-3.5 text-blue-600" /> Demo Quick Credentials
-            </span>
-          </div>
-          <div className="grid grid-cols-3 gap-1.5">
-            <button
-              type="button"
-              onClick={() => fillDemo('customer@globetrek.com', 'Customer123!')}
-              className="py-1.5 px-2 bg-white border border-slate-200 hover:border-blue-500 rounded-lg text-[11px] font-bold text-slate-700 hover:text-blue-700 shadow-2xs transition-all text-center cursor-pointer"
-            >
-              Customer
-            </button>
-            <button
-              type="button"
-              onClick={() => fillDemo('staff@globetrek.com', 'Staff123!')}
-              className="py-1.5 px-2 bg-white border border-slate-200 hover:border-blue-500 rounded-lg text-[11px] font-bold text-slate-700 hover:text-blue-700 shadow-2xs transition-all text-center cursor-pointer"
-            >
-              Staff
-            </button>
-            <button
-              type="button"
-              onClick={() => fillDemo('admin@globetrek.com', 'Admin123!')}
-              className="py-1.5 px-2 bg-white border border-slate-200 hover:border-blue-500 rounded-lg text-[11px] font-bold text-slate-700 hover:text-blue-700 shadow-2xs transition-all text-center cursor-pointer"
-            >
-              Admin
-            </button>
-          </div>
-        </div>
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
